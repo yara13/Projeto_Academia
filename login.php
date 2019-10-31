@@ -29,7 +29,7 @@
           <div class="form-group">
             <div class="form-label-group">
               <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required" autofocus="autofocus">
-              <label for="inputEmail">Email</label>
+              <label for="inputEmail">CPF</label>
             </div>
           </div>
           <div class="form-group">
@@ -46,10 +46,10 @@
               </label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.php">Login</a>
+          <a class="btn btn-primary btn-block" href="areaaluno.php">Logar Aluno</a>
+           <a class="btn btn-primary btn-block" href="index.php">Logar Administrador</a>
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.php">Registrar uma Conta</a>
           <a class="d-block small" href="forgot-password.php">Esqueceu sua Senha?</a>
         </div>
       </div>

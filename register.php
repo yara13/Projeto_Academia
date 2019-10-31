@@ -24,7 +24,7 @@
 <div class="form-group">
   <div class="container">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header" align="center">Registrar uma Conta</div>
+      <div class="card-header" align="center">Cadastrar Aluno</div>
       <div class="card-body">
         <form>
         <div class="form-group">
@@ -54,6 +54,7 @@
 </div>
                 </div>
               </div>
+
               <div class="col-md-6">
                 <div class="form-label-group">
                   <input type="number" id="cpf" class="form-control" placeholder="CPF" required="required">
@@ -122,11 +123,11 @@
               </div>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login.php">Registrar</a>
+          <a class="btn btn-primary btn-block" href="login.php">Cadastrar</a>
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="login.php">Página de Login</a>
-          <a class="d-block small" href="forgot-password.php">Esqueceu a Senha?</a>
+         
         </div>
       </div>
     </div>
