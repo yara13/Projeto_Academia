@@ -31,10 +31,11 @@
                                 <div class="card-body-icon">
                                     <i class="fas fa-fw fa-comments"></i>
                                 </div>
-                                <div class="mr-5">26 Novas Mensagens!</div>
+                                <div class="mr-5">Calma…
+Amanhã já é dia de treino!!</div>
                             </div>
                             <a class="card-footer text-white clearfix small z-1" href="#">
-                                <span class="float-left">Ver Detalhes</span>
+                                <span class="float-left">#</span>
                                 <span class="float-right">
                                     <i class="fas fa-angle-right"></i>
                                 </span>
