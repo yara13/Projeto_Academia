@@ -65,285 +65,7 @@
     <h2>Peitoral</h2>
 
     <table>
-      <tr>
-        <th>Item</th>
-        <th>Serie</th>
-        <th>Repetição</th>
-        <th>Carga</th>
-        <tr>
-          <td>CROSS OVER</td>
-          <td><div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              2
-            </button>
-            <div class="dropdown-menu">
-              ...
-            </div>
-          </div>
-        </td>
-        <td>
-          <select name="serie">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </td>
-        <td><div class="btn-group">
-          <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            30
-          </button>
-          <div class="dropdown-menu">
-            ...
-          </div>
-        </div>
-      </td>
-      
-    </tr>
-
-    <tr>
-      <td>PEC DECK</td>
-      <td><div class="btn-group">
-        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          2
-        </button>
-        <div class="dropdown-menu">
-          ...
-        </div>
-      </div>
-    </td>
-    <td>
-      <select name="serie">
-        <option value="10">10</option>
-        <option value="20">20</option>
-        <option value="30">30</option>
-        <option value="40">40</option>
-      </select>
-    </td>
-    <td><div class="btn-group">
-      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        30
-      </button>
-      <div class="dropdown-menu">
-        ...
-      </div>
-    </div>
-  </td>
-
-</tr>
-
-<tr>
-  <td>CRUCIFIXO</td>
-  <td><div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      2
-    </button>
-    <div class="dropdown-menu">
-      ...
-    </div>
-  </div>
-</td>
-<td>
-  <select name="serie">
-    <option value="10">10</option>
-    <option value="20">20</option>
-    <option value="30">30</option>
-    <option value="40">40</option>
-  </select>
-</td>
-<td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-
-</tr>
-<tr>
-  <td>SUPINO RETO</td>
-  <td><div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      2
-    </button>
-    <div class="dropdown-menu">
-      ...
-    </div>
-  </div>
-</td>
-<td>
-  <select name="serie">
-    <option value="10">10</option>
-    <option value="20">20</option>
-    <option value="30">30</option>
-    <option value="40">40</option>
-  </select>
-</td>
-<td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-
-</tr>
-
-<tr>
-  <td>SUPINO INCLINADO</td>
-  <td><div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      2
-    </button>
-    <div class="dropdown-menu">
-      ...
-    </div>
-  </div>
-</td>
-<td>
-  <select name="serie">
-    <option value="10">10</option>
-    <option value="20">20</option>
-    <option value="30">30</option>
-    <option value="40">40</option>
-  </select>
-</td>
-<td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-
-</tr>
-<tr>
-  <td>SUPINO DECLINADO</td>
-  <td><div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      2
-    </button>
-    <div class="dropdown-menu">
-      ...
-    </div>
-  </div>
-</td>
-<td>
-  <select name="serie">
-    <option value="10">10</option>
-    <option value="20">20</option>
-    <option value="30">30</option>
-    <option value="40">40</option>
-  </select>
-</td>
-<td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-
-</tr>
-<tr>
-  <td>FLEXÃO BRAÇO</td>
-  <td><div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      2
-    </button>
-    <div class="dropdown-menu">
-      ...
-    </div>
-  </div>
-</td>
-<td>
-  <select name="serie">
-    <option value="10">10</option>
-    <option value="20">20</option>
-    <option value="30">30</option>
-    <option value="40">40</option>
-  </select>
-</td>
-<td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-
-</tr>
-<tr>
-  <td>SUP. RETO DUMBELL</td>
-  <td><div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      2
-    </button>
-    <div class="dropdown-menu">
-      ...
-    </div>
-  </div>
-</td>
-<td>
-  <select name="serie">
-    <option value="10">10</option>
-    <option value="20">20</option>
-    <option value="30">30</option>
-    <option value="40">40</option>
-  </select>
-</td>
-<td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-
-</tr>
-
-<tr>
-  <td>SUP. INCLINADO DUMBELL</td>
-  <td><div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      2
-    </button>
-    <div class="dropdown-menu">
-      ...
-    </div>
-  </div>
-</td>
-<td>
-  <select name="serie">
-    <option value="10">10</option>
-    <option value="20">20</option>
-    <option value="30">30</option>
-    <option value="40">40</option>
-  </select>
-</td>
-<td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-
-</tr>
+      <?php include 'teste.php'; ?>
 </table>
 
 <br>
@@ -1216,7 +938,7 @@
 </table>
 
 <br>
-<h2>ROSCA NA POLIA</h2>
+<h2>Tríceps</h2>
 
 <table>
   <tr>
@@ -1225,7 +947,7 @@
     <th>Repetição</th>
     <th>Carga</th>
     <tr>
-      <td>ELEVAÇÃO LATERAL</td>
+      <td>Tríceps Testa</td>
       <td><div class="btn-group">
         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           2
@@ -1256,7 +978,7 @@
 </tr>
 
 <tr>
-  <td>ELEVAÇÃO FRONTAL</td>
+  <td>Tríceps Polia</td>
  <td><div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     2
@@ -1287,7 +1009,7 @@
   </tr>
 
 <tr>
-  <td>DESEN. MÁQUINA</td>
+  <td>Tríceps Francês</td>
   <td><div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     2
@@ -1317,7 +1039,7 @@
       
   </tr>
 <tr>
-  <td>ENCOLHIMENTO OMBRO</td>
+  <td>Tríceps Mergulho</td>
   <td><div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     2
@@ -1347,98 +1069,7 @@
       
   </tr>
 <tr>
-  <td>REMADA ALTA</td>
-  <td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    2
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-    <td>
-<select name="serie">
-  <option value="10">10</option>
-  <option value="20">20</option>
-  <option value="30">30</option>
-  <option value="40">40</option>
-</select>
-</td>
-      <td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-      
-  </tr>
-
-<tr>
-  <td>DESENV.BARRA</td>
-  <td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    2
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-    <td>
-<select name="serie">
-  <option value="10">10</option>
-  <option value="20">20</option>
-  <option value="30">30</option>
-  <option value="40">40</option>
-</select>
-</td>
-      <td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-      
-  </tr>
-<tr>
-  <td>DESEN. ALTERNADO</td>
-  <td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    2
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-    <td>
-<select name="serie">
-  <option value="10">10</option>
-  <option value="20">20</option>
-  <option value="30">30</option>
-  <option value="40">40</option>
-</select>
-</td>
-      <td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-      
-  </tr>
-<tr>
-  <td>DESEN. MOINHO</td>
+  <td>Tríceps Mergulho</td>
   <td><div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     2
@@ -1469,7 +1100,67 @@
   </tr>
 
 <tr>
-  <td>DESEN.ALTERNADO</td>
+  <td>Tríceps Coice</td>
+  <td><div class="btn-group">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    2
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+</td>
+    <td>
+<select name="serie">
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+  <option value="40">40</option>
+</select>
+</td>
+      <td><div class="btn-group">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    30
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+</td>
+      
+  </tr>
+<tr>
+  <td>Tríceps Supino</td>
+  <td><div class="btn-group">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    2
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+</td>
+    <td>
+<select name="serie">
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+  <option value="40">40</option>
+</select>
+</td>
+      <td><div class="btn-group">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    30
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+</td>
+      
+  </tr>
+<tr>
+  <td>Tríceps Unilateral</td>
   <td><div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     2
@@ -1500,7 +1191,38 @@
   </tr>
 
 <tr>
-  <td>CRUCIFIXO INVERSO</td>
+  <td>Tríceps Cross Over</td>
+  <td><div class="btn-group">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    2
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+</td>
+    <td>
+<select name="serie">
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+  <option value="40">40</option>
+</select>
+</td>
+      <td><div class="btn-group">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    30
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+</td>
+      
+  </tr>
+
+<tr>
+  <td>Tríceps Corda</td>
  <td><div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     2
@@ -1529,38 +1251,7 @@
 </td>
       
   </tr>
-  <tr>
-    <td>ELEVAÇÃO LAT.BANCO</td>
-    <td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    2
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-    <td>
-<select name="serie">
-  <option value="10">10</option>
-  <option value="20">20</option>
-  <option value="30">30</option>
-  <option value="40">40</option>
-</select>
-</td>
-      <td><div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    30
-  </button>
-  <div class="dropdown-menu">
-    ...
-  </div>
-</div>
-</td>
-      
-  </tr>
-
-</tr>
+  
 
 
 
