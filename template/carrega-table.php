@@ -7,21 +7,21 @@ if (count($data->pessoa)) {
 echo "<thead>
 <tr>
   <th>Nome</th>
-  <th>Profissão</th>
   <th>E-mail</th>
   <th>Idade</th>
   <th>Início</th>
   <th>Mensalidade</th>
+  <th>Situação</th>
 </tr>
 </thead>
 <tfoot>
 <tr>
   <th>Nome</th>
-  <th>Profissão</th>
   <th>E-mail</th>
   <th>Idade</th>
   <th>Início</th>
   <th>Mensalidade</th>
+  <th>Situação</th>
 </tr>
 </tfoot>
 <tbody>";
@@ -32,10 +32,10 @@ echo "<thead>
         echo "<tr>";
         echo "<td>$stand->Name</td>";
         echo "<td>$stand->Position</td>";
-        echo "<td>$stand->Office</td>";
         echo "<td>$stand->Age</td>";
         echo "<td>$stand->Startdate</td>";
         echo "<td>$stand->Salary</td>";
+        echo "<td>$stand->Position</td>";
         echo "</tr>";
     }
     // Close the table
