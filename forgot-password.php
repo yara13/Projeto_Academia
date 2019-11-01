@@ -27,7 +27,7 @@
       <div class="card-body">
         <div class="text-center mb-4">
           <h4>Esqueceu sua senha?</h4>
-          <p>Enter your email address and we will send you instructions on how to reset your password.</p>
+          <p>Digite seu endereço de e-mail e enviaremos instruções sobre como redefinir sua senha.</p>
         </div>
         <form>
           <div class="form-group">
@@ -36,10 +36,10 @@
               <label for="inputEmail">Digite seu email</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login.php">Resetar Senha</a>
+          <a class="btn btn-primary btn-block" href="login.php">Recuperar Senha</a>
         </form>
+        <br>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.php">Registrar uma Conta</a>
           <a class="d-block small" href="login.php">Página de Login</a>
         </div>
       </div>
