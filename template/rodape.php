@@ -1,12 +1,11 @@
-<?php
-echo "
+
       </div>
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->
-      <footer class='sticky-footer'>
-        <div class='container my-auto'>
-          <div class='copyright text-center my-auto'>
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
             <span>Copyright © Portal Academia 2019</span>
           </div>
         </div>
@@ -17,4 +16,3 @@ echo "
 
   </div>
 </body>
-";
