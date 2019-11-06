@@ -31,7 +31,11 @@
 
           <li class="breadcrumb-item active">Tabela</li>
         </ol>
-     
+       <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+          Pagamentos</div>
           
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -39,6 +43,7 @@
                 <tr>
                 <th>Controle</th>
                 <th>Janeiro</th>
+                <th>Fevereiro</th>
                 <th>Março</th>
                 <th>Abril</th>
                 <th>Maio</th>
