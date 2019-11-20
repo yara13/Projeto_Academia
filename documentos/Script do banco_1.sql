@@ -1,58 +1,57 @@
 /* Lógico Completo_1: */
 
 CREATE TABLE usuario (
-    Id_endereco Varchar(40),
+    Id_endereco Integer,
     telefone Varchar(40),
     CPF Varchar(11),
     email char(50),
-    id Interger PRIMARY KEY,
+    id Integer PRIMARY KEY,
     Data_de_Nascimento date,
     nome Varchar(40),
-    fk_Endereco_Id Interger
+    fk_Endereco_Id Integer
 );
 
 CREATE TABLE mensalidade (
     data_pagamento date,
     preco decimal(5,2),
-    id Interger PRIMARY KEY,
-    fk_usuario_id Interger
+    id Integer PRIMARY KEY,
+    fk_usuario_id Integer
 );
 
 CREATE TABLE treino (
     Data date,
-    carga Interger,
-    repeticao Interger,
-    serie Interger,
-    id_tipo Interger,
-    id_grupo Interger,
-    id Interger PRIMARY KEY,
-    fk_usuario_id Interger
+    carga Integer,
+    repeticao Integer,
+    serie Integer,
+    id_grupo Integer,
+    id Integer PRIMARY KEY,
+    fk_usuario_id Integer
 );
 
 CREATE TABLE medidas (
-    Peso Interger,
+    Peso Integer,
     altura decimal(5,2),
     taxa_gordura decimal(5,2),
     data_ficha date,
-    id Interger PRIMARY KEY,
-    fk_usuario_id Interger
+    id Integer PRIMARY KEY,
+    fk_usuario_id Integer
 );
 
 CREATE TABLE tipo (
     nome Varchar(40),
-    id_grupo Interger,
-    id Interger PRIMARY KEY
+    id_grupo Integer,
+    id Integer PRIMARY KEY
 );
 
 CREATE TABLE grupo (
     nome Varchar(11),
-    id Interger PRIMARY KEY
+    id Integer PRIMARY KEY
 );
 
 CREATE TABLE Endereco (
-    Id Interger PRIMARY KEY,
+    Id Integer PRIMARY KEY,
     Rua Varchar(40),
-    Numero Interger,
+    Numero Integer,
     Complemento Varchar(40),
     Cidade Varchar(40),
     Estado char(02),
