@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Nov-2019 às 18:31
+-- Generation Time: 21-Nov-2019 às 15:37
 -- Versão do servidor: 10.1.38-MariaDB
--- versão do PHP: 7.1.27
+-- versão do PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -115,15 +115,27 @@ CREATE TABLE `treino` (
 --
 
 CREATE TABLE `usuario` (
-  `Id_endereco` int(11) DEFAULT NULL,
   `telefone` varchar(40) DEFAULT NULL,
   `CPF` varchar(11) DEFAULT NULL,
   `email` char(50) DEFAULT NULL,
   `id` int(11) NOT NULL,
   `Data_de_Nascimento` date DEFAULT NULL,
   `nome` varchar(40) DEFAULT NULL,
-  `fk_Endereco_Id` int(11) DEFAULT NULL
+  `fk_Endereco_Id` int(11) DEFAULT NULL,
+  `data_cadastro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `situacao` tinyint(1) NOT NULL DEFAULT '1',
+  `sexo` varchar(11) NOT NULL,
+  `tipo` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`telefone`, `CPF`, `email`, `id`, `Data_de_Nascimento`, `nome`, `fk_Endereco_Id`, `data_cadastro`, `situacao`, `sexo`, `tipo`) VALUES
+('123456789', '12345678901', 'fulano@fulano.com', 0, '1989-10-20', 'Fulano', NULL, '2019-11-21 11:25:33', 1, 'Masculino', 1),
+('123456798', '12345678901', 'fulano@fulano', 1, '1989-10-20', 'Fulano', NULL, '2019-11-21 11:27:01', 1, 'Masculino', 1),
+('987654321', '78945612312', 'rony@rony.com', 2, '1970-10-15', 'rony', NULL, '2019-11-21 11:28:12', 1, 'Masculino', 2);
 
 --
 -- Indexes for dumped tables
