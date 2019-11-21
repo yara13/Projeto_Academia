@@ -1,14 +1,17 @@
 /* Lógico Completo_1: */
 
 CREATE TABLE usuario (
-    Id_endereco Integer,
     telefone Varchar(40),
     CPF Varchar(11),
     email char(50),
     id Integer PRIMARY KEY,
     Data_de_Nascimento date,
     nome Varchar(40),
-    fk_Endereco_Id Integer
+    fk_Endereco_Id Integer,
+    data_cadastro datetime,
+    situacao boolean,
+    sexo varchar(11),
+    tipo int(1)
 );
 
 CREATE TABLE mensalidade (
@@ -23,18 +26,31 @@ CREATE TABLE treino (
     carga Integer,
     repeticao Integer,
     serie Integer,
+    id_tipo Integer,
     id_grupo Integer,
     id Integer PRIMARY KEY,
     fk_usuario_id Integer
 );
 
 CREATE TABLE medidas (
-    Peso Integer,
+    peso Integer,
     altura decimal(5,2),
     taxa_gordura decimal(5,2),
-    data_ficha date,
-    id Integer PRIMARY KEY,
-    fk_usuario_id Integer
+    data_avaliacao date,
+    id Integer PRIMARY KEY UNIQUE,
+    fk_usuario_id Integer,
+    b_direito decimal(5,2),
+    b_esquerdo decimal(5,2),
+    torax decimal(5,2),
+    ante_b_dir decimal(5,2),
+    ante_b_esq decimal(5,2),
+    abdominal decimal(5,2),
+    quadril decimal(5,2),
+    cintura decimal(5,2),
+    coxa_dir decimal(5,2),
+    coxa_esq decimal(5,2),
+    pant_dir decimal(5,2),
+    pant_esq decimal(5,2)
 );
 
 CREATE TABLE tipo (
@@ -78,12 +94,3 @@ ALTER TABLE medidas ADD CONSTRAINT FK_medidas_2
     REFERENCES usuario (id)
     ON DELETE RESTRICT;
  
-ALTER TABLE tipo ADD CONSTRAINT FK_tipo_2
-    FOREIGN KEY (fk_treino_id)
-    REFERENCES treino (id)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE grupo ADD CONSTRAINT FK_grupo_2
-    FOREIGN KEY (fk_tipo_id)
-    REFERENCES tipo (id)
-    ON DELETE RESTRICT;
