@@ -1,3 +1,11 @@
+<?php
+session_start();
+header('Content-Type: text/html; charset=utf-8');
+include ('funcoes/conn.php');
+//include ('funcoes/verifica_login.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,130 +24,128 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 
 </head>
 
 <body class="bg-dark">
 
-<div class="form-group">
-  <div class="container">
-    <div class="card card-register mx-auto mt-5">
-      <div class="card-header" align="center">Cadastrar Aluno</div>
-      <div class="card-body">
-        <form>
-        <div class="form-group">
-            <div class="form-label-group">
-              <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required">
-              <label for="firstName">Nome completo</label>
+  <div class="form-group">
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header" align="center">Cadastrar Aluno</div>
+        <div class="card-body">
+          <?php include 'funcoes/alert.php'; ?>
+          <form action="funcoes/regist_user.php">
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required" name="nome">
+                <label for="firstName">Nome completo</label>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-            
-              <div class="col-md-3">
-              <label for="sexo">Sexo</label>
-                <div class="form-label-group">
-                                 
-<div class="custom-control custom-radio">
-<input type="radio" class="custom-control-input" id="masculino" name="sexo" checked>
-  <label class="custom-control-label" for="masculino">Masculino</label>
-  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-label-group">
-                <div class="custom-control custom-radio"> 
-    <input type="radio" class="custom-control-input" id="feminino" name="sexo">
-    <label class="custom-control-label" for="feminino">Feminino</label>
-</div>
-                </div>
-              </div>
+            <div class="form-group">
+              <div class="form-row">
 
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="number" id="cpf" class="form-control" placeholder="CPF" required="required">
-                  <label for="cpf">CPF</label>
+                <div class="col-md-3">
+                  
+                  <div class="form-label-group">
+
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="masculino" name="sexo" checked>
+                      <label class="custom-control-label" for="masculino">Masculino</label>
+                    </div>
+                  </div>
+                
+                  <div class="form-label-group">
+                    <div class="custom-control custom-radio"> 
+                      <input type="radio" class="custom-control-input" id="feminino" name="sexo">
+                      <label class="custom-control-label" for="feminino">Feminino</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md">
+                  <div class="form-label-group">
+                    <input type="number" id="cpf" class="form-control" placeholder="CPF" required="required" name="CPF">
+                    <label for="cpf">CPF</label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="date" id="dtnascimento" class="form-control" placeholder="Data Nascimento" required="required" autofocus="autofocus">
-                  <label for="dtnascimento">Data Nascimento</label>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="date" id="dtnascimento" class="form-control" placeholder="Data Nascimento" required="required" autofocus="autofocus" name="Data_de_Nascimento">
+                    <label for="dtnascimento">Data Nascimento</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="number" id="telefone" class="form-control" placeholder="Telefone" required="required">
-                  <label for="telefone">Telefone</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="text" id="objetivo" class="form-control" placeholder="Objetivo" required="required">
-              <label for="objetivo">Objetivo</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="date" id="inicio" class="form-control" placeholder="Inicio" required="required" autofocus="autofocus">
-                  <label for="inicio">Inicio</label>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="date" id="avaliacao" class="form-control" placeholder="Avaliação" required="required">
-                  <label for="avaliacao">Avaliação</label>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="number" id="telefone" class="form-control" placeholder="Telefone" required="required" name="telefone">
+                    <label for="telefone">Telefone</label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
-              <label for="inputEmail">Email</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="required">
-                  <label for="inputPassword">Senha</label>
+            
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="date" id="inicio" class="form-control" placeholder="Inicio" required="required" autofocus="autofocus" name="data_cadastro">
+                    <label for="inicio">Inicio</label>
+                  </div>
                 </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required" name="email">
+                <label for="inputEmail">Email</label>
               </div>
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="password" id="confirmPassword" class="form-control" placeholder="Confirma Senha" required="required">
-                  <label for="confirmPassword">Confirma Senha</label>
                 </div>
+
               </div>
             </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="text" id="inputLogin" class="form-control" placeholder="Login" required="required" name="login">
+                <label for="inputLogin">Login</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="required" name="senha">
+                    <label for="inputPassword">Senha</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirma Senha" required="required" name="confirmSenha">
+                    <label for="confirmPassword">Confirma Senha</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
+           
+          </form>
+          <div class="text-center">
+            
+
           </div>
-          <a class="btn btn-primary btn-block" href="fmedidas.php">Cadastrar</a>
-        </form>
-        <div class="text-center">
-          <a class="d-block small mt-3" href="login.php">Página de Login</a>
-         
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-</body>
+  </body>
 
-</html>
+  </html>
