@@ -1,15 +1,16 @@
 /* Lógico Completo_1: */
+/* Lógico Completo_1: */
 
 CREATE TABLE usuario (
     telefone Varchar(40),
-    CPF Varchar(11),
+    cpf Varchar(11),
     email char(50),
-    id Integer PRIMARY KEY,
-    Data_de_Nascimento date,
+    id int PRIMARY KEY AUTO_INCREMENT,
+    data_de_nascimento date,
     nome Varchar(40),
-    fk_Endereco_Id Integer,
-    data_cadastro datetime,
-    situacao boolean,
+    fk_endereco_id int,
+    data_cadastro datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    situacao boolean NOT NULL DEFAULT '1',
     sexo varchar(11),
     tipo int(1)
 );
@@ -17,28 +18,28 @@ CREATE TABLE usuario (
 CREATE TABLE mensalidade (
     data_pagamento date,
     preco decimal(5,2),
-    id Integer PRIMARY KEY,
-    fk_usuario_id Integer
+    id int PRIMARY KEY AUTO_INCREMENT,
+    fk_usuario_id int
 );
 
 CREATE TABLE treino (
-    Data date,
-    carga Integer,
-    repeticao Integer,
-    serie Integer,
-    id_tipo Integer,
-    id_grupo Integer,
-    id Integer PRIMARY KEY,
-    fk_usuario_id Integer
+    data date,
+    carga int,
+    repeticao int,
+    serie int,
+    id_tipo int,
+    id_grupo int,
+    id int PRIMARY KEY AUTO_INCREMENT,
+    fk_usuario_id int
 );
 
 CREATE TABLE medidas (
-    peso Integer,
+    peso int,
     altura decimal(5,2),
     taxa_gordura decimal(5,2),
-    data_avaliacao date,
-    id Integer PRIMARY KEY UNIQUE,
-    fk_usuario_id Integer,
+    data_avaliacao date NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    id int PRIMARY KEY AUTO_INCREMENT,
+    fk_usuario_id int,
     b_direito decimal(5,2),
     b_esquerdo decimal(5,2),
     torax decimal(5,2),
@@ -55,28 +56,28 @@ CREATE TABLE medidas (
 
 CREATE TABLE tipo (
     nome Varchar(40),
-    id_grupo Integer,
-    id Integer PRIMARY KEY
+    id_grupo int,
+    id int PRIMARY KEY AUTO_INCREMENT
 );
 
 CREATE TABLE grupo (
     nome Varchar(11),
-    id Integer PRIMARY KEY
+    id int PRIMARY KEY AUTO_INCREMENT
 );
 
-CREATE TABLE Endereco (
-    Id Integer PRIMARY KEY,
-    Rua Varchar(40),
-    Numero Integer,
-    Complemento Varchar(40),
-    Cidade Varchar(40),
-    Estado char(02),
-    CEP Varchar(40)
+CREATE TABLE endereco (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    rua Varchar(40),
+    numero int,
+    complemento Varchar(40),
+    cidade Varchar(40),
+    cstado char(02),
+    cep Varchar(40)
 );
  
 ALTER TABLE usuario ADD CONSTRAINT FK_usuario_2
-    FOREIGN KEY (fk_Endereco_Id)
-    REFERENCES Endereco (Id)
+    FOREIGN KEY (fk_endereco_id)
+    REFERENCES endereco (id)
     ON DELETE RESTRICT;
  
 ALTER TABLE mensalidade ADD CONSTRAINT FK_mensalidade_2
@@ -91,6 +92,6 @@ ALTER TABLE treino ADD CONSTRAINT FK_treino_2
  
 ALTER TABLE medidas ADD CONSTRAINT FK_medidas_2
     FOREIGN KEY (fk_usuario_id)
-    REFERENCES usuario (id)
+    REFERENCES usuario (id
     ON DELETE RESTRICT;
  
