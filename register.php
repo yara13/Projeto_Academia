@@ -36,7 +36,7 @@ include ('funcoes/conn.php');
         <div class="card-header" align="center">Cadastrar Aluno</div>
         <div class="card-body">
           <?php include 'funcoes/alert.php'; ?>
-          <form action="funcoes/regist_user.php">
+          <form method="post" action="funcoes/regist_user.php">
             <div class="form-group">
               <div class="form-label-group">
                 <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required" name="nome">
@@ -66,7 +66,7 @@ include ('funcoes/conn.php');
 
                 <div class="col-md">
                   <div class="form-label-group">
-                    <input type="number" id="cpf" class="form-control" placeholder="CPF" required="required" name="CPF">
+                    <input type="number" id="cpf" class="form-control" placeholder="cpf" required="required" name="CPF">
                     <label for="cpf">CPF</label>
                   </div>
                 </div>
@@ -76,13 +76,13 @@ include ('funcoes/conn.php');
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="date" id="dtnascimento" class="form-control" placeholder="Data Nascimento" required="required" autofocus="autofocus" name="Data_de_Nascimento">
+                    <input type="date" id="dtnascimento" class="form-control" placeholder="Data Nascimento" required="required" autofocus="autofocus" name="data_de_Nascimento">
                     <label for="dtnascimento">Data Nascimento</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="number" id="telefone" class="form-control" placeholder="Telefone" required="required" name="telefone">
+                    <input type="number" id="telefone" class="form-control" placeholder="telefone" required="required" name="telefone">
                     <label for="telefone">Telefone</label>
                   </div>
                 </div>
@@ -106,12 +106,7 @@ include ('funcoes/conn.php');
 
               </div>
             </div>
-            <div class="form-group">
-              <div class="form-label-group">
-                <input type="text" id="inputLogin" class="form-control" placeholder="Login" required="required" name="login">
-                <label for="inputLogin">Login</label>
-              </div>
-            </div>
+            
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6">

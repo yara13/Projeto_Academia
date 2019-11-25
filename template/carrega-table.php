@@ -38,9 +38,9 @@
 
       $id             = $linha["id"];
       $nome           = $linha["nome"];
-      $data           = $linha["Data_de_Nascimento"];
+      $data           = $linha["data_de_nascimento"];
       $email          = $linha["email"];
-      $CPF            = $linha["CPF"];
+      $CPF            = $linha["cpf"];
       $data_cadastro  = $linha["data_cadastro"];
       $situacao       = $linha["situacao"];
       $tipo           = $linha["tipo"];
@@ -51,7 +51,7 @@
       $idade = calculo_idade($data);
 
 
-      if($tipo == 1){
+      if($tipo == 2){
 
         ?>
 
