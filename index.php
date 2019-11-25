@@ -101,7 +101,10 @@
                         <div class="table-responsive">
 
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <?php include 'template/carrega-table.php' ?>
+                                <?php 
+                                include 'funcoes/conn.php';
+                                include 'template/carrega-table.php' 
+                                ?>
                             </table>
                         </div>
                     </div>
