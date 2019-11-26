@@ -1,5 +1,5 @@
 <?php
-session_start();
+include 'funcoes/verifica_session_start.php';
 header('Content-Type: text/html; charset=utf-8');
 include ('funcoes/conn.php');
 //include ('funcoes/verifica_login.php');
@@ -35,7 +35,9 @@ include ('funcoes/conn.php');
       <div class="card card-register mx-auto mt-5">
         <div class="card-header" align="center">Cadastrar Aluno</div>
         <div class="card-body">
+          
           <?php include 'funcoes/alert.php'; ?>
+
           <form method="post" action="funcoes/regist_user.php">
             <div class="form-group">
               <div class="form-label-group">
@@ -66,7 +68,7 @@ include ('funcoes/conn.php');
 
                 <div class="col-md">
                   <div class="form-label-group">
-                    <input type="number" id="cpf" class="form-control" placeholder="cpf" required="required" name="CPF">
+                    <input type="number" id="cpf" class="form-control" placeholder="cpf" required="required" name="cpf">
                     <label for="cpf">CPF</label>
                   </div>
                 </div>
@@ -76,7 +78,7 @@ include ('funcoes/conn.php');
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="date" id="dtnascimento" class="form-control" placeholder="Data Nascimento" required="required" autofocus="autofocus" name="data_de_Nascimento">
+                    <input type="date" id="dtnascimento" class="form-control" placeholder="Data Nascimento" required="required" autofocus="autofocus" name="data_de_nascimento">
                     <label for="dtnascimento">Data Nascimento</label>
                   </div>
                 </div>

@@ -51,7 +51,7 @@
       $idade = calculo_idade($data);
 
 
-      if($tipo == 2){
+      if($tipo == 1){
 
         ?>
 
