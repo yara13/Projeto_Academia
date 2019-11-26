@@ -2,7 +2,7 @@
 $servidor="localhost";
 $usuario="root";
 $senha="";
-$baseDeDados="portal_academia";
+$baseDeDados="academia";
 
 $conn = new mysqli($servidor,$usuario,$senha,$baseDeDados);
 if ($conn->connect_error) {
