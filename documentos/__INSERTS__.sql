@@ -1,7 +1,4 @@
 
---
--- Extraindo dados da tabela `medidas`
---
 INSERT INTO `estado` (`nome`, `sigla`) VALUES
 ("Acre", "AC"),
 ("Alagoas", "AL"),
@@ -108,7 +105,3 @@ INSERT INTO `treino` (`data`, `carga`, `repeticao`, `serie`, `fk_grupo_id`, `fk_
 --
 
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
