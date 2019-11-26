@@ -35,14 +35,14 @@ INSERT INTO `estado` (`nome`, `sigla`) VALUES
 --
 -- Estrutura da tabela `usuario`
 --
-INSERT INTO `endereco` (`rua`, `numero`, `Complemento`, `Cidade`, `CEP`, `fk_estado_id`) VALUES
+insert into `endereco` (`rua`, `numero`, `complemento`, `cidade`, `cep`, `fk_estado_id`) values
 ("Rua Nova", 123, "Apt 102", "Acopiara", "54345061", 6), 
 ("Rua Central", 07, "Casa", "Fortaleza", "54345060", 6),
 ("Rua da Rodoviaria", 14, "Sebrado", "Acopiara", "54345062", 6),
 ("Rua da Matriz", 1223, " ", "Acopiara", "54345063", 6),
 ("Rua dos Moreiras", 55, "Beco", "Acopiara", "54345064", 6);
 
-INSERT INTO `usuario` (`telefone`, `CPF`, `email`, `Data_de_Nascimento`, `nome`, `fk_Endereco_Id`, `data_cadastro`, `situacao`, `sexo`, `tipo`, `senha`) VALUES
+insert into `usuario` (`telefone`, `cpf`, `email`, `data_de_nascimento`, `nome`, `fk_endereco_id`, `data_cadastro`, `situacao`, `sexo`, `tipo`, `senha`) values
 ('123456789', '12345678901', 'fulano@fulano.com', '1989-10-20', 'Daniel', 1, '2019-11-21 11:25:33', 1, 'M', 1, "123456"),
 ('123456798', '12345678901', 'fulano@fulano.br', '1989-10-20', 'Sara', 2, '2019-11-21 11:27:01', 1, 'M', 1, "123456"),
 ('123456798', '12345678901', 'fulano@fulano.ch', '1989-10-20', 'Yara', 3, '2019-11-21 11:27:01', 1, 'F', 1, "123456"),

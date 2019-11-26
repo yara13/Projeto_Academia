@@ -1,65 +1,65 @@
--- phpMyAdmin SQL Dump
+-- phpmyadmin sql dump
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 21-Nov-2019 às 15:37
--- Versão do servidor: 10.1.38-MariaDB
--- versão do PHP: 7.3.2
+-- host: 127.0.0.1
+-- generation time: 21-nov-2019 às 15:37
+-- versão do servidor: 10.1.38-mariadb
+-- versão do php: 7.3.2
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+set sql_mode = "no_auto_value_on_zero";
+set autocommit = 0;
+start transaction;
+set time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 set @old_character_set_client=@@character_set_client */;
+/*!40101 set @old_character_set_results=@@character_set_results */;
+/*!40101 set @old_collation_connection=@@collation_connection */;
+/*!40101 set names utf8mb4 */;
 
 --
--- Database: `portal_academia`
+-- database: `portal_academia`
 --
--- Indexes for dumped tables
+-- indexes for dumped tables
 --
-CREATE TABLE `estado` (
-  `Id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `nome` varchar(99) DEFAULT NULL,
-  `sigla` varchar(2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+create table `estado` (
+  `id` int primary key not null auto_increment,
+  `nome` varchar(99) default null,
+  `sigla` varchar(2) default null
+) engine=innodb default charset=utf8;
 
 
-CREATE TABLE `endereco` (
-  `Id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `Rua` varchar(100) DEFAULT NULL,
-  `Numero` int(11) DEFAULT NULL,
-  `Complemento` varchar(40) DEFAULT NULL,
-  `Cidade` varchar(100) DEFAULT NULL,
-  `CEP` varchar(9) NOT NULL,
+create table `endereco` (
+  `id` int primary key not null auto_increment,
+  `rua` varchar(100) default null,
+  `numero` int(11) default null,
+  `complemento` varchar(40) default null,
+  `cidade` varchar(100) default null,
+  `cep` varchar(9) not null,
   `fk_estado_id` int,
-   FOREIGN KEY (fk_estado_id) REFERENCES estado(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+   foreign key (fk_estado_id) references estado(id)
+) engine=innodb default charset=utf8;
 
 --
--- Estrutura da tabela `usuario`
+-- estrutura da tabela `usuario`
 --
 
-CREATE TABLE `usuario` (
-  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `telefone` varchar(40) DEFAULT NULL,
-  `CPF` varchar(11) NOT NULL,
-  `email` char(50) DEFAULT NULL,
-  `Data_de_Nascimento` date NOT NULL,
-  `nome` varchar(40) NOT NULL,
-  `fk_Endereco_Id` int NOT NULL,
-  `data_cadastro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `situacao` tinyint(1) NOT NULL DEFAULT '1',
-  `sexo` varchar(1) NOT NULL,
-  `tipo` int(1) NOT NULL DEFAULT '1',
-  `senha` varchar(50) NOT NULL,
-  FOREIGN KEY (fk_Endereco_Id) REFERENCES endereco(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+create table `usuario` (
+  `id` int primary key not null auto_increment,
+  `telefone` varchar(40) default null,
+  `cpf` varchar(11) not null,
+  `email` char(50) default null,
+  `data_de_nascimento` date not null,
+  `nome` varchar(40) not null,
+  `fk_endereco_id` int not null,
+  `data_cadastro` datetime not null default current_timestamp,
+  `situacao` tinyint(1) not null default '1',
+  `sexo` varchar(1) not null,
+  `tipo` int(1) not null default '1',
+  `senha` varchar(50) not null,
+  foreign key (fk_endereco_id) references endereco(id)
+) engine=innodb default charset=utf8;
 
 
 
@@ -68,62 +68,62 @@ CREATE TABLE `usuario` (
 
 
 --
--- Estrutura da tabela `grupo`
+-- estrutura da tabela `grupo`
 --
 
-CREATE TABLE `grupo` (
-  `Id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `nome` varchar(99) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+create table `grupo` (
+  `id` int primary key not null auto_increment,
+  `nome` varchar(99) not null
+) engine=innodb default charset=utf8;
 -- --------------------------------------------------------
 
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mensalidade`
+-- estrutura da tabela `mensalidade`
 --
 
-CREATE TABLE `mensalidade` (
-  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `data_pagamento` date DEFAULT NULL,
-  `preco` decimal(5,2) DEFAULT NULL,
-  `fk_usuario_id` int NOT NULL,
-  FOREIGN KEY (fk_usuario_id) REFERENCES usuario(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+create table `mensalidade` (
+  `id` int primary key not null auto_increment,
+  `data_pagamento` date default null,
+  `preco` decimal(5,2) default null,
+  `fk_usuario_id` int not null,
+  foreign key (fk_usuario_id) references usuario(id)
+) engine=innodb default charset=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tipo`
+-- estrutura da tabela `tipo`
 --
 
-CREATE TABLE `tipo` (
-  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `nome` varchar(40) NOT NULL,
-  `fk_grupo_id` int NOT NULL,
-  FOREIGN KEY (fk_grupo_id) REFERENCES grupo(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+create table `tipo` (
+  `id` int primary key not null auto_increment,
+  `nome` varchar(40) not null,
+  `fk_grupo_id` int not null,
+  foreign key (fk_grupo_id) references grupo(id)
+) engine=innodb default charset=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `treino`
+-- estrutura da tabela `treino`
 --
 
-CREATE TABLE `treino` (
-  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `Data` date DEFAULT NULL,
-  `carga` int(11) DEFAULT NULL,
-  `repeticao` int(11) DEFAULT NULL,
-  `serie` int(11) DEFAULT NULL,
-  `fk_grupo_id` int NOT NULL,
-  `fk_usuario_id` int NOT NULL,
-  `fk_tipo_id` int NOT NULL,
-  FOREIGN KEY (fk_grupo_id) REFERENCES grupo(id),
-  FOREIGN KEY (fk_usuario_id) REFERENCES usuario(id),
-  FOREIGN KEY (fk_tipo_id) REFERENCES tipo(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+create table `treino` (
+  `id` int primary key not null auto_increment,
+  `data` date default null,
+  `carga` int(11) default null,
+  `repeticao` int(11) default null,
+  `serie` int(11) default null,
+  `fk_grupo_id` int not null,
+  `fk_usuario_id` int not null,
+  `fk_tipo_id` int not null,
+  foreign key (fk_grupo_id) references grupo(id),
+  foreign key (fk_usuario_id) references usuario(id),
+  foreign key (fk_tipo_id) references tipo(id)
+) engine=innodb default charset=utf8;
 
 -- --------------------------------------------------------
 
@@ -131,34 +131,34 @@ CREATE TABLE `treino` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `medidas`
+-- estrutura da tabela `medidas`
 --
 
-CREATE TABLE `medidas` (
-  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `peso` decimal(5,2) DEFAULT NULL,
-  `altura` decimal(5,2) DEFAULT NULL,
-  `taxa_gordura` decimal(5,2) DEFAULT NULL,
-  `data_avaliacao` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `fk_usuario_id` int NOT NULL,
-  `b_direito` decimal(5,2) DEFAULT NULL,
-  `b_esquerdo` decimal(5,2) DEFAULT NULL,
-  `torax` decimal(5,2) DEFAULT NULL,
-  `ante_b_dir` decimal(5,2) DEFAULT NULL,
-  `ante_b_esq` decimal(5,2) DEFAULT NULL,
-  `abdominal` decimal(5,2) DEFAULT NULL,
-  `quadril` decimal(5,2) DEFAULT NULL,
-  `cintura` decimal(5,2) DEFAULT NULL,
-  `coxa_dir` decimal(5,2) DEFAULT NULL,
-  `coxa_esq` decimal(5,2) DEFAULT NULL,
-  `pant_dir` decimal(5,2) DEFAULT NULL,
-  `pant_esq` decimal(5,2) DEFAULT NULL,
-  FOREIGN KEY (fk_usuario_id) REFERENCES usuario(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+create table `medidas` (
+  `id` int primary key not null auto_increment,
+  `peso` decimal(5,2) default null,
+  `altura` decimal(5,2) default null,
+  `taxa_gordura` decimal(5,2) default null,
+  `data_avaliacao` datetime not null default current_timestamp,
+  `fk_usuario_id` int not null,
+  `b_direito` decimal(5,2) default null,
+  `b_esquerdo` decimal(5,2) default null,
+  `torax` decimal(5,2) default null,
+  `ante_b_dir` decimal(5,2) default null,
+  `ante_b_esq` decimal(5,2) default null,
+  `abdominal` decimal(5,2) default null,
+  `quadril` decimal(5,2) default null,
+  `cintura` decimal(5,2) default null,
+  `coxa_dir` decimal(5,2) default null,
+  `coxa_esq` decimal(5,2) default null,
+  `pant_dir` decimal(5,2) default null,
+  `pant_esq` decimal(5,2) default null,
+  foreign key (fk_usuario_id) references usuario(id)
+) engine=innodb default charset=utf8;
 
 
-COMMIT;
+commit;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 set character_set_client=@old_character_set_client */;
+/*!40101 set character_set_results=@old_character_set_results */;
+/*!40101 set collation_connection=@old_collation_connection */;
