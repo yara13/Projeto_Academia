@@ -1,129 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include 'template/head.php'; ?>
+<head>
 
-<body id="page-top">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  <?php include 'template/cabecalho.php'; ?>
-  
-    <div id="wrapper">
-    
-      <?php include 'template/menu-lateral.php'; ?>
-      
-        <div id="content-wrapper">
-            <div class="container-fluid">
- <!-- Incluir o código acima no incio de todas as páginas-->
+  <title>Portal - Admin - Login</title>
 
-                <!-- Menu para editar conforme a página-->
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.php">Dashboard</a>
-                    </li>
-                    <li class="breadcrumb-item active">Visão Geral</li>
-                </ol>
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-                <!-- Icon Cards-->
-                <div class="row">
-                    <div class="col-xl-3 col-sm-6 mb-3">
-                        <div class="card text-white bg-primary o-hidden h-100">
-                            <div class="card-body">
-                                <div class="card-body-icon">
-                                    <i class="fas fa-fw fa-comments"></i>
-                                </div>
-                                <div class="mr-5">26 Novas Mensagens!</div>
-                            </div>
-                            <a class="card-footer text-white clearfix small z-1" href="#">
-                                <span class="float-left">Ver Detalhes</span>
-                                <span class="float-right">
-                                    <i class="fas fa-angle-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 mb-3">
-                        <div class="card text-white bg-warning o-hidden h-100">
-                            <div class="card-body">
-                                <div class="card-body-icon">
-                                    <i class="fas fa-fw fa-list"></i>
-                                </div>
-                                <div class="mr-5">11 Novas Tarefas!</div>
-                            </div>
-                            <a class="card-footer text-white clearfix small z-1" href="#">
-                                <span class="float-left">Ver Detalhes</span>
-                                <span class="float-right">
-                                    <i class="fas fa-angle-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 mb-3">
-                        <div class="card text-white bg-success o-hidden h-100">
-                            <div class="card-body">
-                                <div class="card-body-icon">
-                                    <i class="fas fa-fw fa-shopping-cart"></i>
-                                </div>
-                                <div class="mr-5">123 Novos Pedidos!</div>
-                            </div>
-                            <a class="card-footer text-white clearfix small z-1" href="#">
-                                <span class="float-left">Ver Detalhes</span>
-                                <span class="float-right">
-                                    <i class="fas fa-angle-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 mb-3">
-                        <div class="card text-white bg-danger o-hidden h-100">
-                            <div class="card-body">
-                                <div class="card-body-icon">
-                                    <i class="fas fa-fw fa-life-ring"></i>
-                                </div>
-                                <div class="mr-5">13 New Tickets!</div>
-                            </div>
-                            <a class="card-footer text-white clearfix small z-1" href="#">
-                                <span class="float-left">Ver Detalhes</span>
-                                <span class="float-right">
-                                    <i class="fas fa-angle-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-         
-                <!-- DataTables Example -->
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fas fa-table"></i>
-                        Controle de Pagamento
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
 
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <?php 
-                                include 'funcoes/conn.php';
-                                include 'template/carrega-table.php' 
-                                ?>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-                </div>
+</head>
 
-                <!-- Area Chart Example-->
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fas fa-chart-area"></i>
-                    Exemplo de Area de Gráfico</div>
-                    <div class="card-body">
-                        <canvas id="myAreaChart" width="100%" height="30"></canvas>
-                    </div>
-                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-                </div>
+<body class="bg-dark">
 
-  <!-- /.content-wrapper -->
-  <!-- Incluir esse código em todas as paginas apos o fim do conteúdo -->        
-  <?php include 'template/rodape.php'; ?>
-  <?php include 'template/includes.php'; ?>
-  </html>
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required" autofocus="autofocus">
+              <label for="inputEmail">CPF</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="required">
+              <label for="inputPassword">Senha</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me">
+                Lembrar Senha
+              </label>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block" href="areaaluno.php">Logar Aluno</a>
+           <a class="btn btn-primary btn-block" href="admin.php">Logar Administrador</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small" href="forgot-password.php">Esqueceu sua Senha?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+</body>
+
+</html>

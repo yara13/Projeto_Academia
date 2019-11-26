@@ -1,3 +1,4 @@
+<?php include 'funcoes/verifica_session_start.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,93 +6,121 @@
 
 <body id="page-top">
 
-  <?php include 'template/cabecalho.php'; ?>
-  
-    <div id="wrapper">
-    
-      <?php include 'template/menu-lateral.php'; ?>
-      
-        <div id="content-wrapper">
-            <div class="container-fluid">
-      <!-- Incluir o código acima no incio de todas as páginas-->
-       
-      <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="index.php">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Ficha de Medidas</li>
-        </ol>
+	<?php include 'template/cabecalho.php'; ?>
 
-        <!-- Page Content -->
-        <h1>Ficha de Medidas</h1>
-        <hr>
+	<div id="wrapper">
 
-        	<!-- ************************** INICIO DO FORMULARIO ***************************** -->
-	<form method="POST" action="ftreino.php">
-		<div class="form-group">
-			<label for="name">Data:</label> 
-			<input type="date" class="form-control" name="name" > </br>
+		<?php include 'template/menu-lateral.php'; ?>
 
-			<label for="name">Peso:</label> 
-			<input type="number" class="form-control" name="name" > </br>
+		<div id="content-wrapper">
+			<div class="container-fluid">
+				<!-- Incluir o código acima no incio de todas as páginas-->
+				<?php include 'funcoes/alert.php'; ?>
+				<!-- Breadcrumbs-->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="index.php">Dashboard</a>
+					</li>
 
-			<label for="name">Altura:</label> 
-			<input type="number" class="form-control" name="name"> </br>
+					<li class="breadcrumb-item active">Ficha de Medidas</li>
+				</ol>
 
-			<label for="name">B.dir:</label> 
-			<input type="number" class="form-control" name="name"> </br>
+				<!-- Page Content -->
+				<h1>Ficha de Medidas</h1>
+				<hr>
 
-			<label for="name">B.Esq:</label> 
-			<input type="number" class="form-control" name="name"> </br>
+				<!-- ************************** INICIO DO FORMULARIO ***************************** -->
+				<form method="POST" action="funcoes/regist_medidas.php">
+					<div class="form-group">
+						
+						<div class="form-group">
+							<label for="exampleFormControlSelect1">Example select</label>
+							<select class="form-control" id="exampleFormControlSelect1" name="usuario">
+								<?php 
+								include 'funcoes/conn.php';
+								$select = "SELECT * FROM usuario";
 
-			<label for="name">Torax:</label>
-			<input type="number" class="form-control" name="torax">
+								$resultado 	= $conn->query($select);
 
-			<label for="name">Ante.B.Dir:</label>
-			<input type="number" class="form-control" name="ante.braço" placeholder>
-			
-			<label for="name">Ante.B.Esq:</label>
-			<input type="number" class="form-control" name="ante.braço" placeholder>
 
-			<label for="name">Ante.B.Esq:</label>
-			<input type="number" class="form-control" name="ante.braço" placeholder>
+								if ($resultado->num_rows > 0) {
+									while($linha = $resultado->fetch_assoc()) {
 
-			<label for="name">Abdomen:</label>
-			<input type="number" class="form-control" name="abdomen" placeholder>
+										$nome = $linha['nome'];
+										$id = $linha['id'];?>
 
-			<label for="name">Quadril:</label>
-			<input type="number" class="form-control" name="ante.braço" placeholder>
 
-			<label for="name">Cintura:</label>
-			<input type="number" class="form-control" name="cintura" placeholder>P
+										<option value="<?php echo $id; ?>"><?php echo $nome; ?></option>
+										<?php	
+									}
+								}
+								?>
+								
 
-			<label for="name">Coxa.dir:</label>
-			<input type="number" class="form-control" name="coxa.dir" placeholder>
-			
-			<label for="name">Coxa.Esq:</label>
-			<input type="number" class="form-control" name="coxa.esq" placeholder>
+							</select>
+						</div>
 
-			<label for="name">Pant.Dir:</label>
-			<input type="number" class="form-control" name="pant.dir" placeholder>
+						<label for="name">Data:</label> 
+						<input type="date" class="form-control" name="data_avaliacao" > </br>
 
-			<label for="name">IMC:</label>
-			<input type="number" class="form-control" name="imc" placeholder>
-			
-			<label for="name">Porcentagem de Gorduara:</label>
-			<input type="number" class="form-control" name="gordura" placeholder>
-			
-			
-			<br>
-			<button type="submit" class="btn btn-primary">Registrar</button>
-		</div>
-	</form>
+						<label for="name">Peso:</label> 
+						<input type="number" class="form-control" name="peso" > </br>
 
-	<!-- ************************** FIM DO FORMULARIO ***************************** -->
+						<label for="name">Altura:</label> 
+						<input type="number" class="form-control" name="altura"> </br>
 
-      </div>
-      <!-- /.container-fluid -->
-  <!-- Incluir esse código em todas as paginas apos o fim do conteúdo -->        
-  <?php include 'template/rodape.php'; ?>
-  <?php include 'template/includes.php'; ?>
-  </html>
+						<label for="name">B.dir:</label> 
+						<input type="number" class="form-control" name="b_direito"> </br>
+
+						<label for="name">B.Esq:</label> 
+						<input type="number" class="form-control" name="b_esquerdo"> </br>
+
+						<label for="name">Torax:</label>
+						<input type="number" class="form-control" name="torax">
+
+						<label for="name">Ante.B.Dir:</label>
+						<input type="number" class="form-control" name="ante_b_dir" placeholder>
+
+						<label for="name">Ante.B.Esq:</label>
+						<input type="number" class="form-control" name="ante_b_esq" placeholder>
+
+					
+
+						<label for="name">Abdomen:</label>
+						<input type="number" class="form-control" name="abdominal" placeholder>
+
+						<label for="name">Quadril:</label>
+						<input type="number" class="form-control" name="quadril" placeholder>
+
+						<label for="name">Cintura:</label>
+						<input type="number" class="form-control" name="cintura" placeholder>P
+
+						<label for="name">Coxa.dir:</label>
+						<input type="number" class="form-control" name="coxa_dir" placeholder>
+
+						<label for="name">Coxa.Esq:</label>
+						<input type="number" class="form-control" name="coxa.esq" placeholder>
+
+						<label for="name">Pant.Dir:</label>
+						<input type="number" class="form-control" name="coxa_esq" placeholder>
+
+						<label for="name">IMC:</label>
+						<input type="number" class="form-control" placeholder>
+
+						<label for="name">Porcentagem de Gorduara:</label>
+						<input type="number" class="form-control" placeholder>
+
+
+						<br>
+						<button type="submit" class="btn btn-primary">Registrar</button>
+					</div>
+				</form>
+
+				<!-- ************************** FIM DO FORMULARIO ***************************** -->
+
+			</div>
+			<!-- /.container-fluid -->
+			<!-- Incluir esse código em todas as paginas apos o fim do conteúdo -->        
+			<?php include 'template/rodape.php'; ?>
+			<?php include 'template/includes.php'; ?>
+			</html>
