@@ -26,7 +26,7 @@ if ($_POST['senha'] == $_POST['confirmSenha']) {
 		'$_POST[nome]',
 		'$data',
 		'$_POST[sexo]',
-		2)";
+		1)";
 
 		if ($conn->query($sql2) === TRUE) {
 			$_SESSION['nome_usuario'] 	= $_POST['nome'];
