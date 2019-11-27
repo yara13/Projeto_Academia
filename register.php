@@ -38,7 +38,7 @@ include ('funcoes/conn.php');
           
           <?php include 'funcoes/alert.php'; ?>
 
-          <form method="post" action="funcoes/regist_user.php">
+          <form class="was-validated" method="post" action="funcoes/regist_user.php" >
             
             <div class="form-group">
               <div class="form-label-group">

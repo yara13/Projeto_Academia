@@ -25,10 +25,10 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+        <form class="was-validated">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required" autofocus="autofocus">
+              <input type="number" id="inputEmail" class="form-control" placeholder="Email" required="required" autofocus="autofocus">
               <label for="inputEmail">CPF</label>
             </div>
           </div>
