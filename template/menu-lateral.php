@@ -6,24 +6,20 @@
           <span>Dashboard</span>
         </a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Paginas</span>
-        </a>
-          <!-- ADICIONE AS NOVAS PAGINAS CRIADAS -->
-        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Menu</h6>
-          
-          <a class="dropdown-item" href="register.php">Cadastro</a>
-          
-          <div class="dropdown-divider"></div>
-
-          <a class="dropdown-item" href="fmedidas.php">Ficha de Medidas</a>
-          <a class="dropdown-item" href="ftreino.php">Ficha de Treino</a>
-          
-         
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="register.php">
+          <i class="fas fa-fw fa-file-alt"></i>
+          <span>Cadastro</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fmedidas.php">
+          <i class="fas fa-fw fa-file-contract"></i>
+          <span>Ficha de Medidas</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ftreino.php">
+          <i class="fas fa-fw fa-file-excel"></i>
+          <span>Ficha de Treino</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="charts.php">

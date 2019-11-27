@@ -57,7 +57,6 @@ create table `usuario` (
   `situacao` tinyint(1) not null default '1',
   `sexo` varchar(1) not null,
   `tipo` int(1) not null default '1',
-  `senha` varchar(50) not null,
   foreign key (fk_endereco_id) references endereco(id)
 ) engine=innodb default charset=utf8;
 
@@ -72,8 +71,8 @@ create table `usuario` (
 --
 
 create table `grupo` (
-  `id` int primary key not null auto_increment,
-  `nome` varchar(99) not null
+  `Id` int primary key not null auto_increment,
+  `nomeg` varchar(99) not null
 ) engine=innodb default charset=utf8;
 -- --------------------------------------------------------
 
@@ -100,7 +99,7 @@ create table `mensalidade` (
 
 create table `tipo` (
   `id` int primary key not null auto_increment,
-  `nome` varchar(40) not null,
+  `nomet` varchar(40) not null,
   `fk_grupo_id` int not null,
   foreign key (fk_grupo_id) references grupo(id)
 ) engine=innodb default charset=utf8;
@@ -136,8 +135,8 @@ create table `treino` (
 
 create table `medidas` (
   `id` int primary key not null auto_increment,
-  `peso` decimal(5,2) default null,
-  `altura` decimal(5,2) default null,
+  `peso` decimal(5,2) default null CHECK (peso>=20.0),
+  `altura` decimal(5,2) default null CHECK (altura>=1.00),
   `taxa_gordura` decimal(5,2) default null,
   `data_avaliacao` datetime not null default current_timestamp,
   `fk_usuario_id` int not null,

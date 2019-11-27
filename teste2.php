@@ -5,9 +5,12 @@ $data =  json_decode($json);
 
 if (count($data->itens)) {
 
-echo "<thead>
+echo "
+<table>
+<thead>
     <tr>
       <th>Item</th>
+      <th>Treino</th>
       <th>Serie</th>
       <th>Repetição</th>
       <th>Carga</th>
@@ -20,8 +23,16 @@ echo "<thead>
     foreach ($data->itens as $idx => $stand) {
         // Output a row
         echo "<tr>";
+        echo "<td>
+        <div class='form-check justify-content-center'>
+          <label class='form-check-label'>
+            <input type='checkbox' class='form-check-input' value=''>
+            </label>
+        </div>
+        </td>";
 
-        echo "<td>$stand->ITEM</td>";
+       
+          echo "<td>$stand->ITEM</td>";
         echo "<td>
 
         <div class='btn-group'>

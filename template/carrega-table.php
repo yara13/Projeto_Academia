@@ -29,7 +29,7 @@
 
 
 
-  $sql = "SELECT * FROM usuario ";
+  $sql = "SELECT * FROM usuario u, mensalidade m WHERE u.id = m.fk_usuario_id";
 
   $resultado = $conn->query($sql);
 
@@ -44,8 +44,7 @@
       $data_cadastro  = $linha["data_cadastro"];
       $situacao       = $linha["situacao"];
       $tipo           = $linha["tipo"];
-
-
+      $mensalidade    = $linha["preco"];
 
 
       $idade = calculo_idade($data);
@@ -60,7 +59,7 @@
           <td><?php echo $email; ?></td>
           <td><?php echo $idade; ?></td>
           <td><?php echo $data_cadastro; ?></td>
-          <td></td>
+          <td><?php echo $mensalidade; ?></td>
           <td><?php echo $situacao; ?></td>
         </tr>
 
