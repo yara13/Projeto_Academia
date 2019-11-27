@@ -40,9 +40,9 @@ insert into `endereco` (`rua`, `numero`, `complemento`, `cidade`, `cep`, `fk_est
 ("Rua dos Moreiras", 55, "Beco", "Acopiara", "54345064", 6);
 
 INSERT INTO endereco (rua, numero, complemento, cidade, cep, fk_estado_id) VALUES 
-('Rodoviaria', '678', 'apto 2' 'Acopiara', '54354654', '6')
+('Rodoviaria', '678', 'apto 2', 'Acopiara', '54354654', '6');
 
-insert into `usuario` (`telefone`, `cpf`, `email`, `data_de_nascimento`, `nome`, `fk_endereco_id`, `data_cadastro`, `situacao`, `sexo`, `tipo`) values
+INSERT INTO `usuario` (`telefone`, `cpf`, `email`, `data_de_nascimento`, `nome`, `fk_endereco_id`, `data_cadastro`, `situacao`, `sexo`, `tipo`) VALUES
 ('123456789', '12345678901', 'fulano@fulano.com', '1989-10-20', 'Daniel', 1, '2019-11-21 11:25:33', 1, 'M', 1),
 ('123456798', '12345678901', 'fulano@fulano.br', '1989-10-20', 'Sara', 2, '2019-11-21 11:27:01', 1, 'M', 1),
 ('123456798', '12345678901', 'fulano@fulano.ch', '1989-10-20', 'Yara', 3, '2019-11-21 11:27:01', 1, 'F', 1),
@@ -60,7 +60,7 @@ INSERT INTO `medidas` (`peso`, `altura`, `taxa_gordura`, `data_avaliacao`, `fk_u
 --
 -- Extraindo dados da tabela `usuario`
 --
-INSERT INTO `grupo` (`nome`) VALUES
+INSERT INTO `grupo` (`nomeg`) VALUES
 ("Peitoral"),
 ("Bíceps"),
 ("Ante-Braço"),
@@ -78,7 +78,7 @@ INSERT INTO `mensalidade` (`data_pagamento`, `preco`, `fk_usuario_id`) VALUES
 ('2019-11-25 00:00:00', 50.00, 4),
 ('2019-11-25 00:00:00', 50.00, 5);
 
-INSERT INTO `tipo` (`nome`, `fk_grupo_id`) VALUES
+INSERT INTO `tipo` (`nomet`, `fk_grupo_id`) VALUES
 ("Cross Over", 1),
 ("Cruxifixo", 1),
 ("Flexao Braço", 1),
@@ -107,7 +107,7 @@ INSERT INTO `treino` (`data`, `carga`, `repeticao`, `serie`, `fk_grupo_id`, `fk_
 ('2019-11-25 00:00:00', 40, 20, 3, 1, 4, 4),
 ('2019-11-25 00:00:00', 50, 10, 3, 1, 5, 4);
 --
-INSERT INTO tipo (`nome`, `fk_grupo_id`) VALUES
+INSERT INTO tipo (`nomet`, `fk_grupo_id`) VALUES
 ("Cross Over", 1),
 ("Pec Deck", 1),
 ("Crucifixo", 1),
