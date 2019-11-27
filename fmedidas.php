@@ -35,7 +35,7 @@
 						
 						<div class="form-group">
 							<label for="exampleFormControlSelect1">Example select</label>
-							<select class="form-control" id="exampleFormControlSelect1" name="usuario">
+							<select class="form-control" id="exampleFormControlSelect1" name="fk_usuario_id">
 								<?php 
 								include 'funcoes/conn.php';
 								$select = "SELECT * FROM usuario";
@@ -59,6 +59,7 @@
 
 							</select>
 						</div>
+						
 
 						<label for="name">Data:</label> 
 						<input type="date" class="form-control" name="data_avaliacao" > </br>
@@ -84,8 +85,7 @@
 						<label for="name">Ante.B.Esq:</label>
 						<input type="number" class="form-control" name="ante_b_esq" placeholder>
 
-					
-
+				
 						<label for="name">Abdomen:</label>
 						<input type="number" class="form-control" name="abdominal" placeholder>
 
@@ -93,22 +93,25 @@
 						<input type="number" class="form-control" name="quadril" placeholder>
 
 						<label for="name">Cintura:</label>
-						<input type="number" class="form-control" name="cintura" placeholder>P
+						<input type="number" class="form-control" name="cintura" placeholder>
 
 						<label for="name">Coxa.dir:</label>
 						<input type="number" class="form-control" name="coxa_dir" placeholder>
 
 						<label for="name">Coxa.Esq:</label>
-						<input type="number" class="form-control" name="coxa.esq" placeholder>
+						<input type="number" class="form-control" name="coxa_esq" placeholder>
 
 						<label for="name">Pant.Dir:</label>
-						<input type="number" class="form-control" name="coxa_esq" placeholder>
+						<input type="number" class="form-control" name="pant_dir" placeholder>
+
+						<label for="name">Pant.Esq:</label>
+						<input type="number" class="form-control" name="pant_esq" placeholder>
 
 						<label for="name">IMC:</label>
 						<input type="number" class="form-control" placeholder>
 
 						<label for="name">Porcentagem de Gorduara:</label>
-						<input type="number" class="form-control" placeholder>
+						<input type="number" class="form-control" placeholder name="taxa_gordura">
 
 
 						<br>

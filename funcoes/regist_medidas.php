@@ -31,7 +31,7 @@ $sql = "INSERT INTO medidas
 			'$_POST[altura]',
 			'$_POST[taxa_gordura]',
 			'$_POST[data_avaliacao]',
-			'$_POST[usuario]',
+			'$_POST[fk_usuario_id]',
 			'$_POST[b_direito]',
 			'$_POST[b_esquerdo]',
 			'$_POST[torax]',
