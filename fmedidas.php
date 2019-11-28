@@ -30,100 +30,184 @@
 				<hr>
 
 				<!-- ************************** INICIO DO FORMULARIO ***************************** -->
-				<form method="POST" action="funcoes/regist_medidas.php">
+				<form method="POST" action="funcoes/regist_medidas.php" class="was-validated">
+					
+
 					<div class="form-group">
-						
-						<div class="form-group">
-							<label for="exampleFormControlSelect1">Example select</label>
-							<select class="form-control" id="exampleFormControlSelect1" name="fk_usuario_id">
-								<?php 
-								include 'funcoes/conn.php';
-								$select = "SELECT * FROM usuario";
+						<label for="exampleFormControlSelect1">Example select</label>
+						<select class="form-control" id="exampleFormControlSelect1" name="fk_usuario_id">
+							<option></option>
+							<?php 
+							include 'funcoes/conn.php';
+							$select = "SELECT * FROM usuario";
 
-								$resultado 	= $conn->query($select);
-
-
-								if ($resultado->num_rows > 0) {
-									while($linha = $resultado->fetch_assoc()) {
-
-										$nome = $linha['nome'];
-										$id = $linha['id'];?>
+							$resultado 	= $conn->query($select);
 
 
-										<option value="<?php echo $id; ?>"><?php echo $nome; ?></option>
-										<?php	
-									}
+							if ($resultado->num_rows > 0) {
+								while($linha = $resultado->fetch_assoc()) {
+
+									$nome = $linha['nome'];
+									$id = $linha['id'];?>
+
+
+									<option value="<?php echo $id; ?>"><?php echo $nome; ?></option>
+									<?php	
 								}
-								?>
-								
+							}
+							?>
 
-							</select>
+
+						</select>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="date" class="form-control" name="data_avaliacao" required=""required="">
+							<label for="name">Data:</label> 
 						</div>
-						
+					</div>
 
-						<label for="name">Data:</label> 
-						<input type="date" class="form-control" name="data_avaliacao" > </br>
+					<div class="form-group">
+						<div class="form-label-group">
 
-						<label for="name">Peso:</label> 
-						<input type="number" class="form-control" name="peso" > </br>
+							<input type="number" class="form-control" name="peso" required="">
+							<label for="name">Peso:</label> 
+						</div>
+					</div>
 
-						<label for="name">Altura:</label> 
-						<input type="number" class="form-control" name="altura"> </br>
+					<div class="form-group">
+						<div class="form-label-group">
 
-						<label for="name">B.dir:</label> 
-						<input type="number" class="form-control" name="b_direito"> </br>
+							<input type="number" class="form-control" name="altura"required="">
+							<label for="name">Altura:</label> 
+						</div>
+					</div>
 
-						<label for="name">B.Esq:</label> 
-						<input type="number" class="form-control" name="b_esquerdo"> </br>
+					<div class="form-group">
+						<div class="form-label-group">
 
-						<label for="name">Torax:</label>
-						<input type="number" class="form-control" name="torax">
+							<input type="number" class="form-control" name="b_direito"required="">
+							<label for="name">B.dir:</label> 
+						</div>
+					</div>
 
-						<label for="name">Ante.B.Dir:</label>
-						<input type="number" class="form-control" name="ante_b_dir" placeholder>
+					<div class="form-group">
+						<div class="form-label-group">
 
-						<label for="name">Ante.B.Esq:</label>
-						<input type="number" class="form-control" name="ante_b_esq" placeholder>
+							<input type="number" class="form-control" name="b_esquerdo"required="">
+							<label for="name">B.Esq:</label> 
+						</div>
+					</div>
 
-				
-						<label for="name">Abdomen:</label>
-						<input type="number" class="form-control" name="abdominal" placeholder>
+					<div class="form-group">
+						<div class="form-label-group">
 
-						<label for="name">Quadril:</label>
-						<input type="number" class="form-control" name="quadril" placeholder>
+							<input type="number" class="form-control" name="torax"required="">
+							<label for="name">Torax:</label>
+						</div>
+					</div>
 
-						<label for="name">Cintura:</label>
-						<input type="number" class="form-control" name="cintura" placeholder>
+					<div class="form-group">
+						<div class="form-label-group">
 
-						<label for="name">Coxa.dir:</label>
-						<input type="number" class="form-control" name="coxa_dir" placeholder>
+							<input type="number" class="form-control" name="ante_b_dir" required="">
+							<label for="name">Ante.B.Dir:</label>
+						</div>
+					</div>
 
-						<label for="name">Coxa.Esq:</label>
-						<input type="number" class="form-control" name="coxa_esq" placeholder>
+					<div class="form-group">
+						<div class="form-label-group">
 
-						<label for="name">Pant.Dir:</label>
-						<input type="number" class="form-control" name="pant_dir" placeholder>
-
-						<label for="name">Pant.Esq:</label>
-						<input type="number" class="form-control" name="pant_esq" placeholder>
-
-						<label for="name">IMC:</label>
-						<input type="number" class="form-control" placeholder>
-
-						<label for="name">Porcentagem de Gorduara:</label>
-						<input type="number" class="form-control" placeholder name="taxa_gordura">
+							<input type="number" class="form-control" name="ante_b_esq" required="">
+							<label for="name">Ante.B.Esq:</label>
+						</div>
+					</div>
 
 
-						<br>
-						<button type="submit" class="btn btn-primary">Registrar</button>
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control" name="abdominal" required="">
+							<label for="name">Abdomen:</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control" name="quadril" required="">
+							<label for="name">Quadril:</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control" name="cintura" required="">
+							<label for="name">Cintura:</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control" name="coxa_dir" required="">
+							<label for="name">Coxa.dir:</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control" name="coxa_esq" required="">
+							<label for="name">Coxa.Esq:</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control" name="pant_dir" required="">
+							<label for="name">Pant.Dir:</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control" name="pant_esq" required="">
+							<label for="name">Pant.Esq:</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control" required="">
+							<label for="name">IMC:</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-label-group">
+
+							<input type="number" class="form-control"  name="taxa_gordura"required="">
+							<label for="name">Porcentagem de Gorduara:</label>
+
+
+							<br>
+							<button type="submit" class="btn btn-primary">Registrar</button>
+						</div>
 					</div>
 				</form>
 
 				<!-- ************************** FIM DO FORMULARIO ***************************** -->
 
-			</div>
-			<!-- /.container-fluid -->
-			<!-- Incluir esse código em todas as paginas apos o fim do conteúdo -->        
-			<?php include 'template/rodape.php'; ?>
-			<?php include 'template/includes.php'; ?>
-			</html>
+
+				<!-- /.container-fluid -->
+				<!-- Incluir esse código em todas as paginas apos o fim do conteúdo -->        
+				<?php include 'template/rodape.php'; ?>
+				<?php include 'template/includes.php'; ?>
+				</html>
