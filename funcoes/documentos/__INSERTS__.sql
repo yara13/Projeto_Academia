@@ -107,7 +107,7 @@ INSERT INTO `treino` (`data`, `carga`, `repeticao`, `serie`, `fk_grupo_id`, `fk_
 ('2019-11-25 00:00:00', 40, 20, 3, 1, 4, 4),
 ('2019-11-25 00:00:00', 50, 10, 3, 1, 5, 4);
 --
-INSERT INTO tipo (`nomet`, `fk_grupo_id`) VALUES
+INSERT INTO tipo (`nomet`, `fk_grupo_id`, `imagem`) VALUES
 ("Cross Over", 1,"PEIT01"),
 ("Pec Deck", 1,"PEIT02"),
 ("Crucifixo", 1,"PEIT03"),

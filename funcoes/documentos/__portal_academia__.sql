@@ -100,6 +100,7 @@ create table `mensalidade` (
 create table `tipo` (
   `id` int primary key not null auto_increment,
   `nomet` varchar(40) not null,
+  `imagem` varchar(6) not null,
   `fk_grupo_id` int not null,
   foreign key (fk_grupo_id) references grupo(id)
 ) engine=innodb default charset=utf8;
