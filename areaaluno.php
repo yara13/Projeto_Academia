@@ -137,335 +137,7 @@
     </td>
 </tr>
 
-        <tr data-toggle="collapse" data-target="#accordion1" class="clickable">
-
-        <td>Tríceps Francês</td>
-        <td>
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  2
-              </button>
-              <div class="dropdown-menu">
-                  ...
-              </div>
-            </div>
-         </td>
-       <td>
-          <select name="serie">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </td>
-      <td>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                30
-    </button>
-    <div class="dropdown-menu">
-        ...
-    </div>
-</div>
-</td>
-<td>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Pago!
-    </label>
-</div>
-</td>
-</tr>
-<tr>
-    <td colspan="3">
-        <div id="accordion1" class="collapse">
-            <img src="gif/triceps/tricepsnatesta.gif"> 
-        </div>
-    </td>
-</tr>
-
-        <tr data-toggle="collapse" data-target="#accordion2" class="clickable">
-
-        <td>Tríceps Mergulho</td>
-        <td>
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  2
-              </button>
-              <div class="dropdown-menu">
-                  ...
-              </div>
-            </div>
-         </td>
-       <td>
-          <select name="serie">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </td>
-      <td>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                30
-    </button>
-    <div class="dropdown-menu">
-        ...
-    </div>
-</div>
-</td>
-<td>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Pago!
-    </label>
-</div>
-</td>
-</tr>
-<tr>
-    <td colspan="3">
-        <div id="accordion2" class="collapse">
-            <img src="gif/triceps/tricepsnatesta.gif"> 
-        </div>
-    </td>
-</tr>
-
-
-        <tr data-toggle="collapse" data-target="#accordion3" class="clickable">
-
-        <td>Tríceps Coice</td>
-        <td>
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  2
-              </button>
-              <div class="dropdown-menu">
-                  ...
-              </div>
-            </div>
-         </td>
-       <td>
-          <select name="serie">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </td>
-      <td>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                30
-    </button>
-    <div class="dropdown-menu">
-        ...
-    </div>
-</div>
-</td>
-<td>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Pago!
-    </label>
-</div>
-</td>
-</tr>
-<tr>
-    <td colspan="3">
-        <div id="accordion3" class="collapse">
-            <img src="gif/triceps/tricepsnatesta.gif"> 
-        </div>
-    </td>
-</tr>
-
-        <tr data-toggle="collapse" data-target="#accordion4" class="clickable">
-
-        <td>Tríceps Supino</td>
-        <td>
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  2
-              </button>
-              <div class="dropdown-menu">
-                  ...
-              </div>
-            </div>
-         </td>
-       <td>
-          <select name="serie">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </td>
-      <td>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                30
-    </button>
-    <div class="dropdown-menu">
-        ...
-    </div>
-</div>
-</td>
-<td>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Pago!
-    </label>
-</div>
-</td>
-</tr>
-<tr>
-    <td colspan="3">
-        <div id="accordion4" class="collapse">
-            <img src="gif/triceps/tricepsnatesta.gif"> 
-        </div>
-    </td>
-</tr>
-
-        <tr data-toggle="collapse" data-target="#accordion5" class="clickable">
-
-        <td>Tríceps Testa</td>
-        <td>
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  2
-              </button>
-              <div class="dropdown-menu">
-                  ...
-              </div>
-            </div>
-         </td>
-       <td>
-          <select name="serie">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </td>
-      <td>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                30
-    </button>
-    <div class="dropdown-menu">
-        ...
-    </div>
-</div>
-</td>
-<td>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Pago!
-    </label>
-</div>
-</td>
-</tr>
-<tr>
-    <td colspan="3">
-        <div id="accordion5" class="collapse">
-            <img src="gif/triceps/tricepsnatesta.gif"> 
-        </div>
-    </td>
-</tr>
-
-        <tr data-toggle="collapse" data-target="#accordion6" class="clickable">
-
-        <td>Tríceps Cross Over</td>
-        <td>
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  2
-              </button>
-              <div class="dropdown-menu">
-                  ...
-              </div>
-            </div>
-         </td>
-       <td>
-          <select name="serie">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </td>
-      <td>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                30
-    </button>
-    <div class="dropdown-menu">
-        ...
-    </div>
-</div>
-</td>
-<td>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Pago!
-    </label>
-</div>
-</td>
-</tr>
-<tr>
-    <td colspan="3">
-        <div id="accordion6" class="collapse">
-            <img src="gif/triceps/tricepsnatesta.gif"> 
-        </div>
-    </td>
-</tr>
-
-        <tr data-toggle="collapse" data-target="#accordion7" class="clickable">
-
-        <td>Tríceps Corda</td>
-        <td>
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  2
-              </button>
-              <div class="dropdown-menu">
-                  ...
-              </div>
-            </div>
-         </td>
-       <td>
-          <select name="serie">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </td>
-      <td>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                30
-    </button>
-    <div class="dropdown-menu">
-        ...
-    </div>
-</div>
-</td>
-<td>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Pago!
-    </label>
-</div>
-</td>
-</tr>
-<tr>
-    <td colspan="3">
-        <div id="accordion7" class="collapse">
-            <img src="gif/triceps/tricepsnatesta.gif"> 
-        </div>
-    </td>
-</tr>
+       
 </tbody>
 </table>
 
@@ -487,3 +159,45 @@
 <?php include 'template/rodape.php'; ?>
 <?php include 'template/includes.php'; ?>
 </html>
+WHERE t.fk_tipo_id = tp.id and t.fk_usuario_id = u.id and t.fk_grupo_id = g.Id and t.fk_usuario_id = 1
+
+<?php 
+
+
+  include './funcoes/conn.php';
+
+
+
+  $sql = "SELECT * FROM usuario u, mensalidade m WHERE u.id = m.fk_usuario_id";
+
+  $resultado = $conn->query($sql);
+
+  if ($resultado->num_rows > 0) {
+    while($linha = $resultado->fetch_assoc()) {
+
+      $id             = $linha["id"];
+      $nome           = $linha["nome"];
+      $data           = $linha["data_de_nascimento"];
+      $email          = $linha["email"];
+      $CPF            = $linha["cpf"];
+      $data_cadastro  = $linha["data_cadastro"];
+      $situacao       = $linha["situacao"];
+      $tipo           = $linha["tipo"];
+      $mensalidade    = $linha["preco"];
+
+
+      $idade = calculo_idade($data);
+
+
+      if($tipo == 1){
+
+        ?>
+
+        <tr>
+          <td><?php echo $nome; ?></td>
+          <td><?php echo $email; ?></td>
+          <td><?php echo $idade; ?></td>
+          <td><?php echo $data_cadastro; ?></td>
+          <td><?php echo $mensalidade; ?></td>
+          <td><?php echo $situacao; ?></td>
+        </tr>
