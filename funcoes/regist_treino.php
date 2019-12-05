@@ -13,12 +13,13 @@ if (!$arr) {
 
 
 
-foreach($arr as $check){
 
-	$id = $check;
+foreach($arr as $id){
 
-	$selectGrupo = "SELECT * FROM tipo WHERE id='$id'";
-	$resul 	= $conn->query($selectGrupo);
+	
+
+	$select = "SELECT * FROM tipo WHERE id='$id'";
+	$resul 	= $conn->query($select);
 	if ($resul->num_rows > 0) {
 		while($linha = $resul->fetch_assoc()) {
 			$fk_grupo_id = $linha['fk_grupo_id'];
@@ -27,15 +28,11 @@ foreach($arr as $check){
 		}
 	}
 
-	$sql = "INSERT INTO treino(fk_usuario_id, fk_grupo_id, fk_tipo_id, carga, serie, repeticao) VALUES ('$_POST[usuario]', '$fk_grupo_id', '$id', '$_POST[carga]', '$_POST[serie]', '$_POST[repeticao]', )";
+	$sql = "INSERT INTO treino (fk_usuario_id, fk_grupo_id, fk_tipo_id, carga, serie, repeticao) VALUES ('$_POST[usuario]', '$fk_grupo_id', '$id', '$_POST[carga]', '$_POST[serie]', '$_POST[repeticao]' )";
 
 	if ($conn->query($sql) === TRUE) {
 
-		$_SESSION['check'] 			= 1;
-		$_SESSION['msg']			= 'Treino cadastrado!';
-		$_SESSION['alert_color']	= 1;
-		header("location: ../ftreino.php");
-		exit();
+		
 
 	} else {
 
@@ -44,3 +41,10 @@ foreach($arr as $check){
 
 
 	}
+}
+
+$_SESSION['check'] 			= 1;
+$_SESSION['msg']			= 'Treino cadastrado!';
+$_SESSION['alert_color']	= 1;
+header("location: ../ftreino.php");
+exit();

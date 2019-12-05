@@ -1,7 +1,7 @@
 <?php
 $servidor="localhost";
 $usuario="root";
-$senha="";
+$senha="root";
 $baseDeDados="portal_academia";
 $conn = new mysqli($servidor,$usuario,$senha,$baseDeDados);
 if ($conn->connect_error) {

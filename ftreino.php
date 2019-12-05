@@ -14,7 +14,9 @@
     <div id="content-wrapper">
       <div class="container-fluid">
         <!-- Incluir o código acima no incio de todas as páginas-->
-        
+
+        <?php include 'funcoes/alert.php'; ?>
+
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
@@ -40,8 +42,11 @@
                   <select class="form-control" id="alunos" name="usuario">
                     <?php 
                     include 'funcoes/conn.php';
+
                     $select = "SELECT * FROM usuario";
+
                     $resultado  = $conn->query($select);
+
                     if ($resultado->num_rows > 0) {
                       while($linha = $resultado->fetch_assoc()) {
                         $nome = $linha['nome'];
@@ -68,7 +73,7 @@
                 </div>
                 <div class="col-md-2">
                   <div class="form-label-group">
-                    <select class="form-control" id="esteira">
+                    <select class="form-control" name="esteira">
                       <option>0</option>
                       <option>5</option>
                       <option>10</option>
@@ -92,7 +97,7 @@
                 </div>
                 <div class="col-md-2">
                   <div class="form-label-group">
-                    <select class="form-control" id="bicicleta">
+                    <select class="form-control" name="bicicleta">
                       <option>0</option>
                       <option>5</option>
                       <option>10</option>
@@ -116,7 +121,7 @@
                 </div>
                 <div class="col-md-2">
                   <div class="form-label-group">
-                    <select class="form-control" id="eliptica">
+                    <select class="form-control" name="eliptica">
                       <option>0</option>
                       <option>5</option>
                       <option>10</option>
