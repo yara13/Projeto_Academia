@@ -1,3 +1,6 @@
+<?php 
+include 'funcoes/verifica_session_start.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +18,7 @@
       <div class="container-fluid">
         <!-- Incluir o código acima no incio de todas as páginas-->
 
-        <?php include 'funcoes/alert.php'; ?>
+        
 
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
@@ -24,6 +27,7 @@
           </li>
           <li class="breadcrumb-item active">Ficha de Treino</li>
         </ol>
+        <?php include 'funcoes/alert.php'; ?>
 
         <!-- Page Content -->
         <h1>Ficha de Treino</h1>
@@ -60,86 +64,7 @@
                 </div>
               </div>
             </div>
-            <br>    <br>            
-
-            <h2> Ergometria</h2>
-            <br> 
-            <div class="form-group">
-              <div class="form-row">
-                <div class="col-md-1">
-                  <div class="form-label-group" align="right">
-                    <label for="esteira">Esteira: </label>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <div class="form-label-group">
-                    <select class="form-control" name="esteira">
-                      <option>0</option>
-                      <option>5</option>
-                      <option>10</option>
-                      <option>15</option>
-                      <option>20</option>
-                      <option>25</option>
-                      <option>30</option>
-                      <option>35</option>
-                      <option>40</option>
-                      <option>45</option>
-                      <option>50</option>
-                      <option>55</option>
-                      <option>60</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-1">
-                  <div class="form-label-group" align="right">
-                    <label for="bicicleta">Bicicleta: </label>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <div class="form-label-group">
-                    <select class="form-control" name="bicicleta">
-                      <option>0</option>
-                      <option>5</option>
-                      <option>10</option>
-                      <option>15</option>
-                      <option>20</option>
-                      <option>25</option>
-                      <option>30</option>
-                      <option>35</option>
-                      <option>40</option>
-                      <option>45</option>
-                      <option>50</option>
-                      <option>55</option>
-                      <option>60</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-1">
-                  <div class="form-label-group" align="right">
-                    <label for="eliptica">Eliptica: </label>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <div class="form-label-group">
-                    <select class="form-control" name="eliptica">
-                      <option>0</option>
-                      <option>5</option>
-                      <option>10</option>
-                      <option>15</option>
-                      <option>20</option>
-                      <option>25</option>
-                      <option>30</option>
-                      <option>35</option>
-                      <option>40</option>
-                      <option>45</option>
-                      <option>50</option>
-                      <option>55</option>
-                      <option>60</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>        
+                   
 
             <?php include './funcoes/carrega_treino.php'; ?>
             <br>           
@@ -154,23 +79,7 @@
       <!-- Incluir esse código em todas as paginas apos o fim do conteúdo -->        
       <?php include 'template/rodape.php'; ?>
       <?php include 'template/includes.php'; ?>
-      <style>
-        table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-
-        td, th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-
-        tr:nth-child(even) {
-          background-color: #dddddd;
-        }
-      </style>
+      
       <script src="js/check.js"></script>
     </body>
     </html>

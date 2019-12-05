@@ -156,9 +156,9 @@ INSERT INTO tipo (`nomet`, `fk_grupo_id`, `imagem`) VALUES
 ("Agachamento Hack", 6,"COXA11"),
 ("Avanço No Caixote", 6,"COXA12"),
 
-("Bicicleta", 8,"ERGO01"),
-("Esteira", 8,"ERGO02"),
-("Eliptica", 8,"ERGO03");
+("Bicicleta", 9,"ERGO01"),
+("Esteira", 9,"ERGO02"),
+("Eliptica", 9,"ERGO03");
 
 
 INSERT INTO `treino` (`data`, `carga`, `repeticao`, `serie`, `fk_grupo_id`, `fk_tipo_id`, `fk_usuario_id`) VALUES
