@@ -35,13 +35,13 @@
         </div>
 
         <div class="form-group">
-          <div class="form-label-group">
-            <input type="password" id="senha" class="form-control" placeholder="Digite sua Senha" required="required">
-            <label for="inputPassword">Digite sua senha</label>
+          
+            <input type="password" id="senha" class="form-control" placeholder="Digite sua Senha" required>
+            
             <div class="invalid-feedback">
              Senha Invalida
            </div>
-         </div>
+        
        </div>
 
        <div class="form-group">
