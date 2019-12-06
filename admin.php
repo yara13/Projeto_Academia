@@ -18,7 +18,7 @@
                 <!-- Menu para editar conforme a página-->
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="index.php">Dashboard</a>
+                        <a href="index.php">Dashboarda</a>
                     </li>
                     <li class="breadcrumb-item active">Visão Geral</li>
                 </ol>
