@@ -12,6 +12,15 @@ set autocommit = 0;
 start transaction;
 set time_zone = "+00:00";
 
+DROP TABLE IF EXISTS treino;
+DROP TABLE IF EXISTS tipo;
+DROP TABLE IF EXISTS mes;
+DROP TABLE IF EXISTS grupo;
+DROP TABLE IF EXISTS mensalidade;
+DROP TABLE IF EXISTS medidas;
+DROP TABLE IF EXISTS endereco;
+DROP TABLE IF EXISTS estado;
+DROP TABLE IF EXISTS usuario;
 
 /*!40101 set @old_character_set_client=@@character_set_client */;
 /*!40101 set @old_character_set_results=@@character_set_results */;
@@ -72,10 +81,14 @@ create table `usuario` (
 
 create table `grupo` (
   `Id` int primary key not null auto_increment,
-  `nomeg` varchar(99) not null
+  `nomeg` varchar(99) not null,
+  `grupo` varchar(1) not null
 ) engine=innodb default charset=utf8;
 -- --------------------------------------------------------
-
+create table `mes` (
+  `Id` int primary key not null auto_increment,
+  `nomem` varchar(40) not null
+) engine=innodb default charset=utf8;
 
 -- --------------------------------------------------------
 
@@ -88,7 +101,10 @@ create table `mensalidade` (
   `data_pagamento` date default null,
   `preco` decimal(5,2) default null,
   `fk_usuario_id` int not null,
-  foreign key (fk_usuario_id) references usuario(id)
+  `flag` boolean DEFAULT 0,
+  `fk_mes_id` int not null,
+  foreign key (fk_usuario_id) references usuario(id),
+  foreign key (fk_mes_id) references mes(id)
 ) engine=innodb default charset=utf8;
 
 -- --------------------------------------------------------

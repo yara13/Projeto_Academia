@@ -1,104 +1,109 @@
 <?php include 'conn.php'; ?>
 
+
+
+
+
 <div class='table-responsive'>
   <p>Aluno Daniel</p>
-  <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">treino A</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">treino B</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">treino C</a>
-  </li>
-  
-</ul>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        
-        <th>Treino</th>
-        <th>Serie</th>
-        <th>Repetição</th>
-        <th>Carga</th>
-        <th>Feito</th>
-       
-      </tr>
-    </thead>
 
-    <tbody >
-      <?php
-      $select = "SELECT tp.nomet, tp.imagem, t.carga, t.repeticao, t.serie, tp.id as 'idt', u.id,  SUBSTRING(UPPER(g.nomeg), 1, 4) as 'grupo' FROM tipo tp, treino t, usuario u, grupo g
-WHERE t.fk_tipo_id = tp.id and t.fk_usuario_id = u.id and t.fk_grupo_id = g.Id and t.fk_usuario_id = 1
-";
-      $resultado 	= $conn->query($select);
-      if ($resultado->num_rows > 0) {
-        while($linha = $resultado->fetch_assoc()) {                   
-          $nomet = $linha['nomet'];
-          $nomeg = $linha['grupo'];
-          $serie = $linha['serie'];
-          $repeticao = $linha['repeticao'];
-          $carga = $linha['carga'];
-          $imagem = $linha["imagem"];
-          $caminho = "./gif/$nomeg/$imagem.gif.gif";
-          $id_tipo = $linha["idt"];
-          carregaLinha ($nomet, $nomeg, $serie, $repeticao, $carga, $caminho, $id_tipo);                      
-        }
-      }?>
-    </tbody> 
-  </table> 
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="A-tab" data-toggle="tab" href="#A" role="tab" aria-controls="home" aria-selected="true">Treino A</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="B-tab" data-toggle="tab" href="#B" role="tab" aria-controls="profile" aria-selected="false">Treino B</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="C-tab" data-toggle="tab" href="#C" role="tab" aria-controls="contact" aria-selected="false">Treino C</a>
+    </li>
+  </ul>  
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="A" role="tabpanel" aria-labelledby="home-tab">
+        <?php preencheTabela(1, 1, $conn); ?> 
+    </div>
+    <div class="tab-pane fade" id="B" role="tabpanel" aria-labelledby="profile-tab">
+        <?php preencheTabela(1, 2, $conn); ?> 
+    </div>
+    <div class="tab-pane fade" id="C" role="tabpanel" aria-labelledby="contact-tab">
+        <?php preencheTabela(1, 3, $conn); ?>  
+    </div>
+  </div>
 </div> 
+
+
+<input type="checkbox" onClick="toggle(this)" /> Marcar Todos<br/>
+<button type="button" class="btn btn-success">Gravar Treino</button>
 
 <?php 
 
-function carregaLinha ($nomet, $nomeg, $serie, $repeticao, $carga, $caminho, $id_tipo){?>
-  <!--<tr>
-    <td><?php echo $nomeg; ?></td>
-    <td><?php echo $nomet; ?></td>
-    <td><?php echo $serie; ?></td>
-    <td><?php echo $repeticao; ?></td>
-    <td><?php echo $carga; ?></td>
-    <td colspan="3">
-        <div id="accordion" class="collapse">
-            <?php echo "<img src='$caminho' alt='Smiley face' height='42' width='42'/>"; ?>
-        </div>
-    </td>
-  </tr>-->
-         <tr data-toggle="collapse" data-target="#accordion<?php echo $id_tipo; ?>" class="clickable">
-
-      
-        <td><?php echo $nomet; ?></td>
-        <td>
-            <?php echo $serie; ?>
-         </td>
-       
+function carregaLinha ($nomet, $nomeg, $serie, $repeticao, $carga, $caminho, $id_tipo){
+    $a = "<tr data-toggle='collapse' data-target='#accordion$id_tipo' class='clickable'>
+      <td>$nomet</td>
+      <td>$serie</td>
+      <td>$repeticao</td>
+      <td>$carga</td>
       <td>
-        <?php echo $repeticao; ?>
-
-</td>
-<td>
-    <?php echo $carga; ?>
-</td>
-<td>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Pago!
-    </label>
-</div>
-</td>
-</tr>
-<tr>
-    <td colspan="3">
-        <div id="accordion<?php echo $id_tipo; ?>" class="collapse">
-            <?php echo "<img src='$caminho' alt='Smiley face' height='42' width='42'/>"; ?>
+        <div class='form-check'>
+          <label class='form-check-label'>
+            <input type='checkbox' class='form-check-input' value='' name='pago'>Ok!
+          </label>
         </div>
-    </td>
-</tr>
+      </td>
+    </tr>
+    <tr>
+      <td colspan='5'>
+        <div id='accordion$id_tipo' align='center' class='collapse'>
+          <img align='center' src='$caminho' alt='' height='300' width='300'/>
+        </div>
+      </td>
+    </tr>";
+    return $a;
+}
 
+function preencheTabela($idAluno, $grupo, $conn) {  
+      echo "
+      <table class='table'>
+        <thead class='thead-dark'>
+          <tr>      
+            <th>Treino</th>
+            <th>Ser.</th>
+            <th>Rep.</th>
+            <th>Carg</th>
+            <th>OK</th>     
+          </tr>
+        </thead>
+        <tbody>";
 
-  <?php
+      $select = "SELECT tp.nomet, tp.imagem, t.carga, t.repeticao, t.serie, tp.id as 'idt', u.id, SUBSTRING(UPPER(g.nomeg), 1, 4) as 'grupo' FROM tipo tp, treino t, usuario u, grupo g WHERE t.fk_tipo_id = tp.id and t.fk_usuario_id = u.id and t.fk_grupo_id = g.Id and t.fk_usuario_id = 1 and g.grupo = $grupo
+      ";
 
+    $resultado 	= $conn->query($select);
+    if ($resultado->num_rows > 0) {
+      while($linha = $resultado->fetch_assoc()) {                   
+        $nomet = $linha['nomet'];
+        $nomeg = $linha['grupo'];
+        $serie = $linha['serie'];
+        $repeticao = $linha['repeticao'];
+        $carga = $linha['carga'];
+        $imagem = $linha["imagem"];
+        $caminho = "./gif/$nomeg/$imagem.gif";
+        $id_tipo = $linha["idt"];
+        $l = carregaLinha ($nomet, $nomeg, $serie, $repeticao, $carga, $caminho, $id_tipo);
+        echo $l;                   
+      }
+    }
+    echo  "</tbody> </table> ";
 }
 
 ?>
+
+
+<script>
+function toggle(source) {
+  checkboxes = document.getElementsByName('pago');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+}
+</script>
