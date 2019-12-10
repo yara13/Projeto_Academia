@@ -195,12 +195,12 @@
 
 							<input type="number" class="form-control"  name="taxa_gordura"required="">
 							<label for="name">Porcentagem de Gorduara:</label>
-
-
-							<br>
-							<button type="submit" class="btn btn-primary">Registrar</button>
 						</div>
 					</div>
+					<div align="center">
+
+								<button type="submit" class="btn btn-primary">Registrar</button>
+							</div>
 				</form>
 
 				<!-- ************************** FIM DO FORMULARIO ***************************** -->
