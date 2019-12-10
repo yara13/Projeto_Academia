@@ -1,3 +1,5 @@
+<?php include 'funcoes/verifica_session_start.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

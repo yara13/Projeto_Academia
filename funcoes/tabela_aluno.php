@@ -1,9 +1,5 @@
 <?php include 'conn.php'; ?>
 
-
-
-
-
 <div class='table-responsive'>
   <p>Aluno Daniel</p>
 

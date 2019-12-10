@@ -1,3 +1,14 @@
+<?php
+// remove all session variables
+session_unset();
+
+// destroy the session
+session_destroy();
+
+print_r($_SESSION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,10 +36,10 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login CPF/E-mail:</div>
       <div class="card-body">
-       <form class="needs-validation" novalidate action="admin.php" method="POST">
+      <form id="loginForm" class="user" method="POST" action="painel.php">
 
         <div class="form-group">
-          <input type="text" class="form-control" id="login" placeholder="Digite seu CPF ou e-mail" required>
+          <input type="text" class="form-control" name="login" id="login" placeholder="Digite seu CPF ou e-mail" required>
           <div class="invalid-feedback">
             Login Invalido
           </div>
@@ -36,7 +47,7 @@
 
         <div class="form-group">
           
-            <input type="password" id="senha" class="form-control" placeholder="Digite sua Senha" required>
+            <input type="password" name="senha" id="senha" class="form-control" placeholder="Digite sua Senha" required>
             
             <div class="invalid-feedback">
              Senha Invalida
@@ -52,9 +63,10 @@
           </label>
         </div>
       </div>
-
-      <button class="btn btn-primary btn-sm" type="submit">Logar Aluno</button>
-      <button class="btn btn-primary btn-sm" type="submit">Logar Administrador</button>
+      
+      <div align="center">
+          <button class="btn btn-primary btn-sm" type="submit">Logar</button>
+      </div>
 <!--
           <a class="btn btn-primary btn-block" href="areaaluno.php">Logar Aluno</a>
           <a class="btn btn-primary btn-block" href="admin.php">Logar Administrador</a>-->

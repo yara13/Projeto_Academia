@@ -51,9 +51,6 @@ insert into `endereco` (`rua`, `numero`, `complemento`, `cidade`, `cep`, `fk_est
 ("Rua da Matriz", 1223, " ", "Acopiara", "54345063", 6),
 ("Rua dos Moreiras", 55, "Beco", "Acopiara", "54345064", 6);
 
-INSERT INTO endereco (rua, numero, complemento, cidade, cep, fk_estado_id) VALUES 
-('Rodoviaria', '678', 'apto 2', 'Acopiara', '54354654', '6');
-
 INSERT INTO `usuario` (`telefone`, `cpf`, `email`, `data_de_nascimento`, `nome`, `fk_endereco_id`, `data_cadastro`, `situacao`, `sexo`, `tipo`) VALUES
 ('123456789', '12345678901', 'fulano@fulano.com', '1989-10-20', 'Daniel', 1, '2019-11-21 11:25:33', 1, 'M', 1),
 ('123456798', '12345678901', 'fulano@fulano.br', '1989-10-20', 'Sara', 2, '2019-11-21 11:27:01', 1, 'M', 1),
@@ -89,7 +86,6 @@ INSERT INTO `mensalidade` (`data_pagamento`, `preco`, `fk_usuario_id`, `flag`, `
 ('2019-11-25 00:00:00', 50.00, 3,1,12),
 ('2019-11-25 00:00:00', 50.00, 4,1,12),
 ('2019-11-25 00:00:00', 50.00, 5,1,12);
-
 
 --
 INSERT INTO tipo (`nomet`, `fk_grupo_id`, `imagem`) VALUES
