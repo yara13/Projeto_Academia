@@ -5,13 +5,14 @@
 
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="A-tab" data-toggle="tab" href="#A" role="tab" aria-controls="home" aria-selected="true">Treino A</a>
+      <a class="nav-link" id="A-tab" data-toggle="tab" href="#A" role="tab" aria-controls="home" aria-selected="true">Treino A</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="B-tab" data-toggle="tab" href="#B" role="tab" aria-controls="profile" aria-selected="false">Treino B</a>
+       
+      <a class="nav-link disabled " id="B-tab" data-toggle="tab" href="#B" role="tab" aria-controls="profile" aria-selected="false">Treino B</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="C-tab" data-toggle="tab" href="#C" role="tab" aria-controls="contact" aria-selected="false">Treino C</a>
+      <a class="nav-link disabled" id="C-tab" data-toggle="tab" href="#C" role="tab" aria-controls="contact" aria-selected="false">Treino C</a>
     </li>
   </ul>  
   <div class="tab-content" id="myTabContent">

@@ -3,9 +3,9 @@
 session_unset();
 
 // destroy the session
-session_destroy();
+//session_destroy();
 
-print_r($_SESSION);
+//print_r($_SESSION);
 
 ?>
 
