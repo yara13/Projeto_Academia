@@ -74,7 +74,7 @@ function preencheTabela($idAluno, $grupo, $conn) {
       $select = "SELECT tp.nomet, tp.imagem, t.carga, t.repeticao, t.serie, tp.id as 'idt', u.id, SUBSTRING(UPPER(g.nomeg), 1, 4) as 'grupo' FROM tipo tp, treino t, usuario u, grupo g WHERE t.fk_tipo_id = tp.id and t.fk_usuario_id = u.id and t.fk_grupo_id = g.Id and t.fk_usuario_id = 1 and g.grupo = $grupo
       ";
 
-    $resultado 	= $conn->query($select);
+    $resultado  = $conn->query($select);
     if ($resultado->num_rows > 0) {
       while($linha = $resultado->fetch_assoc()) {                   
         $nomet = $linha['nomet'];
