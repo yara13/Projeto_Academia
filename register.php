@@ -1,5 +1,5 @@
 <?php
-include 'funcoes/verifica_session_start.php';
+session_start();
 header('Content-Type: text/html; charset=utf-8');
 include ('funcoes/conn.php');
 //include ('funcoes/verifica_login.php');
@@ -35,11 +35,11 @@ include ('funcoes/conn.php');
       <div class="card card-register mx-auto mt-5">
         <div class="card-header" align="center">Cadastrar Aluno</div>
         <div class="card-body">
-          
+
           <?php include 'funcoes/alert.php'; ?>
 
-          <form class="was-validated" method="post" action="funcoes/regist_user.php" >
-            
+          <form class="was-validated" method="post" action="funcoes/regist_user.php" name="frmcpf" >
+
             <div class="form-group">
               <div class="form-label-group">
                 <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required" name="nome">
@@ -55,27 +55,27 @@ include ('funcoes/conn.php');
                   </div>
                 </div>
                 <div class="col-md-2">
-                <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" value="M" id="masculino" name="sexo" checked>
-                      <label class="custom-control-label" for="masculino">M</label>
-                    </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" value="M" id="masculino" name="sexo" checked>
+                    <label class="custom-control-label" for="masculino">M</label>
+                  </div>
                 </div>
                 <div class="col-md-2">
-                <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" value="F" id="feminino" name="sexo">
-                      <label class="custom-control-label" for="feminino">F</label>
-                    </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" value="F" id="feminino" name="sexo">
+                    <label class="custom-control-label" for="feminino">F</label>
+                  </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="number" id="cpf" class="form-control" placeholder="cpf" required="required" name="cpf">
+                    <input class="form-control" id="cpf" type="text" name="cpf" required minlength="11" maxlength="11" size="11" OnKeyPress="TestaCPF(this)">
                     <label for="cpf">CPF</label>
                   </div>
                 </div>
               </div>
             </div>
 
-            
+
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6">
@@ -86,22 +86,22 @@ include ('funcoes/conn.php');
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="number" id="telefone" class="form-control" placeholder="telefone" required="required" name="telefone">
+                    <input type="text" id="telefone" class="form-control" placeholder="telefone" required name="telefone" pattern="^\d{3}-\d{1}.\d{4}-\d{4}$" OnKeyPress="formatar('###-#.####-####', this)" minlength="15" maxlength="15" size="15">
                     <label for="telefone">Telefone</label>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div class="form-group">
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required" name="email">
-                    <label for="inputEmail">Email</label>
+                <label for="inputEmail">Email</label>
               </div>
             </div>
 
-            
-            
+
+
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6">
@@ -134,58 +134,98 @@ include ('funcoes/conn.php');
                 </div>
                 <div class="col-md-3">
                   <div class="form-label-group">
-                    <input type="number" id="cep" class="form-control" placeholder="CEP" required="required" name="cep">
+                    <input type="text" id="cep" class="form-control" placeholder="CEP" required="required" name="cep" OnKeyPress="formatar('#####-###', this)" required minlength="9" maxlength="9" size="9">
                     <label for="cep">CEP</label>
                   </div>
                 </div>
                 <div class="col-md-3">
-                <div class="form-label-group">
-							    <select class="form-control" id="estado" name="estado">
-                  <option value="0">Estado</option>
-                <?php 
-								include 'funcoes/conn.php';
-								$select = "SELECT * FROM estado";
+                  <div class="form-label-group">
+                   <select class="form-control" id="estado" name="estado" required>
+                    <option></option>
+                    <?php 
+                    include 'funcoes/conn.php';
+                    $select = "SELECT * FROM estado";
 
-								$resultado 	= $conn->query($select);
-
-
-								if ($resultado->num_rows > 0) {
-									while($linha = $resultado->fetch_assoc()) {
-
-										$sigla = $linha['sigla'];
-										$id = $linha['id'];?>
+                    $resultado 	= $conn->query($select);
 
 
-										<option value="<?php echo $id; ?>"><?php echo $sigla; ?></option>
-										<?php	
-									}
-								}
-								?>
-								
+                    if ($resultado->num_rows > 0) {
+                     while($linha = $resultado->fetch_assoc()) {
 
-							</select>
-                  </div>
-                </div>
+                      $sigla = $linha['sigla'];
+                      $id = $linha['id'];?>
+
+
+                      <option value="<?php echo $id; ?>"><?php echo $sigla; ?></option>
+                      <?php	
+                    }
+                  }
+                  ?>
+
+
+                </select>
               </div>
             </div>
-
-            <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
-           
-          </form>
-          <div class="text-center">
-            
-
           </div>
         </div>
+
+        <button class="btn btn-primary btn-block" type="submit" onclick="VerificaCPF();">Cadastrar</button>
+
+      </form>
+      <div class="text-center">
+
+
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script>
+  function formatar(mascara, documento){
+    var i = documento.value.length;
+    var saida = mascara.substring(0,1);
+    var texto = mascara.substring(i)
+
+    if (texto.substring(0,1) != saida){
+      documento.value += texto.substring(0,1);
+    }
+
+  }
+</script>
+<script>
+  $(document).ready(function(){
+
+  });
+  function TestaCPF(strCPF) {
+    var Soma;
+    var Resto;
+    Soma = 0;
+    if (strCPF == "00000000000") return false;
+
+    for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+      Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11))  Resto = 0;
+    if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
+
+    Soma = 0;
+    for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+      Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11))  Resto = 0;
+    if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
+    return true;
+    
+  }
+  //var strCPF = "12345678909";
+  //alert(TestaCPF(strCPF));
+</script>
 
 </body>
 

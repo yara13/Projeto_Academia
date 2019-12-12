@@ -2,7 +2,7 @@
 $servidor="localhost";
 $usuario="root";
 $senha="";
-$baseDeDados="portal_academia";
+$baseDeDados="__portal_academia__";
 $conn = new mysqli($servidor,$usuario,$senha,$baseDeDados);
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);

@@ -1,8 +1,10 @@
 <?php  
-
+session_start();
 include 'conn.php';
 
-if ($_POST['senha'] == $_POST['confirmSenha']) {
+$cpf = $_POST['cpf'];
+
+if (validaCPF($cpf)) {
 
 	$sql = "INSERT INTO endereco (rua, numero, complemento, cidade, cep, fk_estado_id) 
 	VALUES 
@@ -12,6 +14,8 @@ if ($_POST['senha'] == $_POST['confirmSenha']) {
 	'$_POST[cidade]',
 	'$_POST[cep]',
 	'$_POST[estado]')";
+
+
 
 	if ($conn->query($sql) === TRUE) {
 		$last_id = $conn->insert_id;
@@ -49,10 +53,41 @@ if ($_POST['senha'] == $_POST['confirmSenha']) {
 
 
 	}
-	
 }else{
 	$_SESSION['check'] 	= 1;
-	$_SESSION['msg']	= 'Senha diferente da confirmação';
+	$_SESSION['msg']	= 'CPF inválido';
 	header('Location:../register.php');
 	exit();
 }
+
+
+
+
+
+
+function validaCPF($cpf) {
+
+    // Extrai somente os números
+	$cpf = preg_replace( '/[^0-9]/is', '', $cpf );
+
+    // Verifica se foi informado todos os digitos corretamente
+	if (strlen($cpf) != 11) {
+		return false;
+	}
+    // Verifica se foi informada uma sequência de digitos repetidos. Ex: 111.111.111-11
+	if (preg_match('/(\d)\1{10}/', $cpf)) {
+		return false;
+	}
+    // Faz o calculo para validar o CPF
+	for ($t = 9; $t < 11; $t++) {
+		for ($d = 0, $c = 0; $c < $t; $c++) {
+			$d += $cpf{$c} * (($t + 1) - $c);
+		}
+		$d = ((10 * $d) % 11) % 10;
+		if ($cpf{$c} != $d) {
+			return false;
+		}
+	}
+	return true;
+}
+
