@@ -21,7 +21,7 @@ DROP TABLE IF EXISTS medidas;
 DROP TABLE IF EXISTS endereco;
 DROP TABLE IF EXISTS estado;
 DROP TABLE IF EXISTS usuario;
-
+DROP TABLE IF EXISTS mensagem;
 /*!40101 set @old_character_set_client=@@character_set_client */;
 /*!40101 set @old_character_set_results=@@character_set_results */;
 /*!40101 set @old_collation_connection=@@collation_connection */;
@@ -32,6 +32,11 @@ DROP TABLE IF EXISTS usuario;
 --
 -- indexes for dumped tables
 --
+create table `mensagem` (
+  `id` int primary key not null auto_increment,
+  `nome` varchar(255) default null
+) engine=innodb default charset=utf8;
+
 create table `estado` (
   `id` int primary key not null auto_increment,
   `nome` varchar(99) default null,
