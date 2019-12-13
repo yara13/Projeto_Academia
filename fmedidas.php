@@ -72,7 +72,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="peso" required="">
+							<input type="text" class="form-control" name="peso" required="">
 							<label for="name">Peso:</label> 
 						</div>
 					</div>
@@ -80,7 +80,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="altura"required="">
+							<input type="text" class="form-control" name="altura"required="">
 							<label for="name">Altura:</label> 
 						</div>
 					</div>
@@ -88,7 +88,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="b_direito"required="">
+							<input type="text" class="form-control" name="b_direito"required="">
 							<label for="name">B.dir:</label> 
 						</div>
 					</div>
@@ -96,7 +96,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="b_esquerdo"required="">
+							<input type="text" class="form-control" name="b_esquerdo"required="">
 							<label for="name">B.Esq:</label> 
 						</div>
 					</div>
@@ -104,7 +104,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="torax"required="">
+							<input type="text" class="form-control" name="torax"required="">
 							<label for="name">Torax:</label>
 						</div>
 					</div>
@@ -112,7 +112,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="ante_b_dir" required="">
+							<input type="text" class="form-control" name="ante_b_dir" required="">
 							<label for="name">Ante.B.Dir:</label>
 						</div>
 					</div>
@@ -120,7 +120,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="ante_b_esq" required="">
+							<input type="text" class="form-control" name="ante_b_esq" required="">
 							<label for="name">Ante.B.Esq:</label>
 						</div>
 					</div>
@@ -129,7 +129,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="abdominal" required="">
+							<input type="text" class="form-control" name="abdominal" required="">
 							<label for="name">Abdomen:</label>
 						</div>
 					</div>
@@ -137,7 +137,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="quadril" required="">
+							<input type="text" class="form-control" name="quadril" required="">
 							<label for="name">Quadril:</label>
 						</div>
 					</div>
@@ -145,7 +145,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="cintura" required="">
+							<input type="text" class="form-control" name="cintura" required="">
 							<label for="name">Cintura:</label>
 						</div>
 					</div>
@@ -153,7 +153,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="coxa_dir" required="">
+							<input type="text" class="form-control" name="coxa_dir" required="">
 							<label for="name">Coxa.dir:</label>
 						</div>
 					</div>
@@ -161,7 +161,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="coxa_esq" required="">
+							<input type="text" class="form-control" name="coxa_esq" required="">
 							<label for="name">Coxa.Esq:</label>
 						</div>
 					</div>
@@ -169,7 +169,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="pant_dir" required="">
+							<input type="text" class="form-control" name="pant_dir" required="">
 							<label for="name">Pant.Dir:</label>
 						</div>
 					</div>
@@ -177,7 +177,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" name="pant_esq" required="">
+							<input type="text" class="form-control" name="pant_esq" required="">
 							<label for="name">Pant.Esq:</label>
 						</div>
 					</div>
@@ -185,7 +185,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control" required="">
+							<input type="text" class="form-control" required="">
 							<label for="name">IMC:</label>
 						</div>
 					</div>
@@ -193,7 +193,7 @@
 					<div class="form-group">
 						<div class="form-label-group">
 
-							<input type="number" class="form-control"  name="taxa_gordura"required="">
+							<input type="text" class="form-control"  name="taxa_gordura"required="">
 							<label for="name">Porcentagem de Gorduara:</label>
 						</div>
 					</div>

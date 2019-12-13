@@ -157,24 +157,26 @@ create table `treino` (
 
 create table `medidas` (
   `id` int primary key not null auto_increment,
-  `peso` decimal(5,2) default null CHECK (peso>=20.0),
-  `altura` decimal(5,2) default null CHECK (altura>=1.00),
+  `peso` decimal(5,2) default null CHECK (peso BETWEEN 20.0 AND 200.0 ),
+  `altura` decimal(5,2) default null CHECK (altura BETWEEN 0.30 AND 2.50),
   `taxa_gordura` decimal(5,2) default null,
   `data_avaliacao` datetime not null default current_timestamp,
   `fk_usuario_id` int not null,
-  `b_direito` decimal(5,2) default null,
-  `b_esquerdo` decimal(5,2) default null,
-  `torax` decimal(5,2) default null,
-  `ante_b_dir` decimal(5,2) default null,
-  `ante_b_esq` decimal(5,2) default null,
-  `abdominal` decimal(5,2) default null,
-  `quadril` decimal(5,2) default null,
-  `cintura` decimal(5,2) default null,
-  `coxa_dir` decimal(5,2) default null,
-  `coxa_esq` decimal(5,2) default null,
-  `pant_dir` decimal(5,2) default null,
-  `pant_esq` decimal(5,2) default null,
+  `b_direito` decimal(5,2) default null CHECK(b_direito BETWEEN 0.10 AND 2.00),
+  `b_esquerdo` decimal(5,2) default null CHECK (b_esquerdo BETWEEN 0.10 AND 2.00),
+  `torax` decimal(5,2) default null CHECK(torax BETWEEN 0.10 AND 2.00),
+  `ante_b_dir` decimal(5,2) default null CHECK (ante_b_dir BETWEEN 0.10 AND 2.00),
+  `ante_b_esq` decimal(5,2) default null CHECK(ante_b_esq BETWEEN 0.10 AND 2.00),
+  `abdominal` decimal(5,2) default null CHECK(abdominal BETWEEN 0.10 AND 2.00),
+  `quadril` decimal(5,2) default null CHECK (quadril BETWEEN 0.10 AND 2.00),
+  `cintura` decimal(5,2) default null CHECK (cintura BETWEEN 0.10 AND 2.00),
+  `coxa_dir` decimal(5,2) default null CHECK(coxa_dir BETWEEN 0.10 AND 2.00),
+  `coxa_esq` decimal(5,2) default null CHECK(coxa_esq BETWEEN 0.10 AND 2.00),
+  `pant_dir` decimal(5,2) default null CHECK(pant_dir BETWEEN 0.10 AND 2.00),
+  `pant_esq` decimal(5,2) default null CHECK(pant_esq BETWEEN 0.10 AND 2.00),
   foreign key (fk_usuario_id) references usuario(id)
+  
+
 ) engine=innodb default charset=utf8;
 
 
