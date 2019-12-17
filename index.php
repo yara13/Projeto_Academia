@@ -8,6 +8,28 @@ session_unset();
 //print_r($_SESSION);
 
 ?>
+<style type="text/css">
+    body {  
+  display: block;
+  position: relative;
+  height:100%;
+  width:100%;
+}
+
+body::after {
+  content: "";
+ background:url(img/logo.png) no-repeat;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: center;
+  z-index: 1;  
+  height:300px;
+  width:300px;
+} 
+</style>
 
 <!DOCTYPE html>
 <html lang="en">

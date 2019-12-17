@@ -36,7 +36,7 @@
 
 function carregaLinha ($nomet, $nomeg, $serie, $repeticao, $carga, $caminho, $id_tipo){
     $a = "<tr data-toggle='collapse' data-target='#accordion$id_tipo' class='clickable'>
-      <td>$nomet</td>
+      <td><a href='#' data-toggle='modal' data-target='#modal$id_tipo'>$nomet</a></td>
       <td>$serie</td>
       <td>$repeticao</td>
       <td>$carga</td>
@@ -48,13 +48,7 @@ function carregaLinha ($nomet, $nomeg, $serie, $repeticao, $carga, $caminho, $id
         </div>
       </td>
     </tr>
-    <tr>
-      <td colspan='5'>
-        <div id='accordion$id_tipo' align='center' class='collapse'>
-          <img align='center' src='$caminho' alt='' height='300' width='300'/>
-        </div>
-      </td>
-    </tr>";
+   ";
     return $a;
 }
 
@@ -91,6 +85,39 @@ function preencheTabela($idAluno, $grupo, $conn) {
       }
     }
     echo  "</tbody> </table> ";
+
+ $resultado  = $conn->query($select);
+    if ($resultado->num_rows > 0) {
+      while($linha = $resultado->fetch_assoc()) {                   
+        $nomet = $linha['nomet'];
+        $nomeg = $linha['grupo'];
+        $serie = $linha['serie'];
+        $repeticao = $linha['repeticao'];
+        $carga = $linha['carga'];
+        $imagem = $linha["imagem"];
+        $caminho = "./gif/$nomeg/$imagem.gif";
+        $id_tipo = $linha["idt"]; 
+echo "
+      <div class='modal fade' id='modal$id_tipo' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog' role='document'>
+      <div class='modal-content'>
+        <div class='modal-header' align='center'>
+          <h5 class='modal-title' id='exampleModalLabel'>$nomet - Como fazer.</h5>
+          <button class='close' type='button' data-dismiss='modal' aria-label='Close'>
+            <span aria-hidden='true'>×</span>
+          </button>
+        </div>
+        <div class='modal-body' align='center'><img align='center' src='$caminho' alt='' height='300' width='300'/></div>
+        <div class='modal-footer'>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  ";
+      }
+    }
+     
 }
 
 ?>

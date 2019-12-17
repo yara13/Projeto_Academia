@@ -1,9 +1,9 @@
  <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="admin.php">
+        <a class="nav-link" href="painel.php">
           <i class="fas fa-fw fa-home"></i>
-          <span>Dashboard</span>
+          <span>Painel</span>
         </a>
       </li>
       <li class="nav-item">
@@ -20,6 +20,11 @@
         <a class="nav-link" href="ftreino.php">
           <i class="fas fa-fw fa-file-excel"></i>
           <span>Ficha de Treino</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ftreino.php">
+          <i class="fas fa-fw fa-file-excel"></i>
+          <span>Treino do Dia</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="charts.php">
